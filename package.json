@@ -2,9 +2,10 @@
   "name": "busca-termos",
   "version": "0.1.0",
   "private": true,
-  "main": "main.js",
+  "main": "electron/main.js",
   "homepage": "./",
   "scripts": {
+    "elec": "electron .",
     "start": "concurrently -k -n electron,react -c \"magenta,cyan\" \"electron .\" \"react-scripts start\"",
     "build:react": "react-scripts build",
     "build:electron-windows": "electron-builder --win --x64",
@@ -20,7 +21,7 @@
     "appId": "com.mosquito.buscaTermos",
     "files": [
       "build/**",
-      "main.js"
+      "electron/**"
     ],
     "win": {
       "target": [
