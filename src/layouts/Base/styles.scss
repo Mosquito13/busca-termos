@@ -1,0 +1,21 @@
+@import '../../sass/styles.scss';
+
+.base-layout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary-dark;
+    border: 1px solid $color-gray;
+    overflow: hidden;
+
+    &__frame {
+        flex: 0 0 3.5rem;
+    }
+
+    &__content {
+        flex: 1;
+        padding: 2rem;
+        position: relative;
+    }
+}

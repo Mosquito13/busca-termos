@@ -6,7 +6,7 @@ module.exports = {
   GERMANY: 'de',
   FRANCE: 'fr',
   ROMANIA: 'ro',
-  ITALIA: 'it',
+  ITALY: 'it',
   SLOVAKIA: 'sk',
   TURKEY: 'tr',
   RUSSIA: 'ru',

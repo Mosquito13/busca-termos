@@ -1,0 +1,74 @@
+@import '../../../sass/styles.scss';
+
+.button {
+    background-color: transparent;
+    border: 1px solid $color-secondary-dark;
+    border-radius: $radius;
+    color: $color-secondary-dark;
+    font-size: inherit;
+    font-family: inherit;
+    white-space: nowrap;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s;
+    height: 4rem;
+
+    &:focus {
+        box-shadow: 0px 0px 5px $color-secondary-dark;
+    }
+
+    &:hover {
+        color: $color-primary-dark;
+        background-color: $color-secondary-dark;
+        box-shadow: 0px 0px 5px $color-secondary-dark;
+    }
+
+    &:active {
+        color: $color-primary-dark;
+        background-color: darken($color-secondary-dark, 5%);
+        box-shadow: 0px 0px 3px darken($color-secondary-dark, 5%);
+        transform: translateY(1px);
+    }
+
+    &--borderless {
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    &--with-icon,
+    &--loading {
+        padding: .5rem 1rem;
+        line-height: 1rem;
+    }
+
+    &--disabled {
+        box-shadow: none;
+        color: $color-detail-dark;
+        border-color: $color-detail-dark;
+        cursor: default;
+
+        &:hover,
+        &:active {
+            box-shadow: none;
+            background-color: transparent;
+            color: $color-detail-dark;
+            transform: none;
+        }
+    }
+
+    &__content {
+        transition: transform .2s;
+    }
+
+    &:active > &__content {
+        transform: translateY(1px);
+    }
+
+    &--disabled:active > &__content {
+        transform: none;
+    }
+}

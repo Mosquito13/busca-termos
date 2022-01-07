@@ -1,0 +1,86 @@
+@import '../../../sass/styles.scss';
+
+.table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid $color-secondary-dark;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &__header {
+        flex: 0;
+        border-bottom: 1px solid $color-secondary-dark;
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__row {
+        display: flex;
+        height: 3rem;
+        align-items: center;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+            color: $color-primary-dark;
+        }
+
+        &--odd {
+            background-color: lighten($color-primary-dark, 5%);
+        }
+
+        &--header,
+        &--header:hover {
+            background-color: darken($color-primary-dark, 5%);
+            color: $color-secondary-dark;
+        }
+
+        &--selected {
+            background-color: $color-alternative-dark;
+        }
+    }
+
+    &__cell {
+        flex: 1;
+        padding-left: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &--small {
+            flex: 0 0 8rem;
+        }
+    }
+
+    &__empty-state {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__empty-state-image-wrapper {
+        overflow: hidden;
+        margin-top: 3rem;
+        max-height: 0rem;
+        transition: max-height 1s ease-in;
+
+        &--open {
+            max-height: 30rem;
+        }
+    }
+
+    &__empty-state-image {
+        height: 30rem;
+        filter: opacity(.2);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

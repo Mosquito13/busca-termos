@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import BaseLayout from './layouts/Base';
+import configureStore from './store';
+
+import Main from './pages/Main';
+import About from './pages/About';
+import Settings from './pages/Settings';
+import ConfigNotFound from './pages/ConfigNotFound';
+
+import './sass/styles.scss';
+
+const store = configureStore();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<BaseLayout />}>
+            <Route index element={<Main />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/configNotFound" element={<ConfigNotFound />} />
+            <Route path="/about" element={<About />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </Provider>
   );
 }
 

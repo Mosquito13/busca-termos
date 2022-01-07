@@ -1,0 +1,27 @@
+@import '../../../sass/styles.scss';
+
+.loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary-dark;
+    transition: all .2s;
+    opacity: 1;
+    visibility: visible;
+
+    &__icon {
+        transform: translate(-10rem, -5rem);
+    }
+
+    &--loaded {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

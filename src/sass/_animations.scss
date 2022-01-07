@@ -1,0 +1,27 @@
+@keyframes checkToggle {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(1rem) scaleY(0.5);
+  }
+
+  100% {
+    transform: translateX(2rem) scaleY(1);
+  }
+}
+
+@keyframes uncheckToggle {
+  0% {
+    transform: translateX(2rem) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(1rem) scaleY(0.5);
+  }
+
+  100% {
+    transform: translateX(0) scaleY(1);
+  }
+}

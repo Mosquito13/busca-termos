@@ -7,12 +7,15 @@ const getId = (line) => parseInt(line.substring(5, 11), 10);
 const getContent = (line) => line.substring(14, line.length - 2);
 
 const parseFileData = (data) => {
-  const parsed = {};
+  const parsed = [];
 
   data.split(/\r?\n/).forEach((line) => {
     if (line.charAt(0) !== '$') return;
 
-    parsed[getId(line)] = getContent(line);
+    parsed.push({
+      id: getId(line),
+      content: getContent(line)
+    });
   });
 
   return parsed;
