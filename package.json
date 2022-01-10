@@ -5,15 +5,17 @@
   "main": "electron/main.js",
   "homepage": "./",
   "scripts": {
-    "elec": "electron .",
     "start": "concurrently -k -n electron,react -c \"magenta,cyan\" \"electron .\" \"react-scripts start\"",
     "build:react": "react-scripts build",
     "build:electron-windows": "electron-builder --win --x64",
-    "build": "npm run clean && npm run build:react && npm run build:electron-windows",
+    "build:installer-windows": "node ./installer/windows-msi.js",
+    "build:zip": "node ./installer/portable-zip.js",
+    "build": "npm run clean && npm run build:react && npm run build:electron-windows && concurrently \"npm run build:installer-windows\" \"npm run build:zip\"",
     "test": "react-scripts test",
     "clean:dist": "rm -r -f ./dist/**",
     "clean:build": "rm -r -f ./build/**",
-    "clean": "concurrently \"npm run clean:dist\" \"npm run clean:build"
+    "clean:release": "rm -r -f ./release/**",
+    "clean": "concurrently \"npm run clean:dist\" \"npm run clean:build\" \"npm run clean:release\""
   },
   "build": {
     "extends": null,
@@ -48,9 +50,11 @@
     ]
   },
   "devDependencies": {
+    "archiver": "^5.3.0",
     "concurrently": "^6.4.0",
     "electron": "^16.0.4",
-    "electron-builder": "^22.14.5"
+    "electron-builder": "^22.14.5",
+    "electron-wix-msi": "^3.2.0"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
