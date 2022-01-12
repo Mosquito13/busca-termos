@@ -22,5 +22,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm run test:api
     - run: npm run test:react-coverage
+    - run: npm run test:api
+    
