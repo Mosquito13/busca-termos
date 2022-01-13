@@ -20,12 +20,6 @@ jobs:
           node-version: '14'
           cache: 'npm'
 
-      - name: Cache modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
       - name: Install modules
         run: npm install
 
@@ -34,6 +28,9 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+
       - name: Running tests
         run: npm run test:api
 
@@ -42,5 +39,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+
       - name: Running tests
         run: npm run test:react-coverage -- --watchAll=false
