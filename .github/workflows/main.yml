@@ -20,6 +20,12 @@ jobs:
           node-version: '14'
           cache: 'npm'
 
+      - name: Cache modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Install modules
         run: npm install
 
@@ -31,6 +37,12 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v2
 
+      - name: Restore cache modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Running tests
         run: npm run test:api
 
@@ -41,6 +53,12 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
+
+      - name: Restore cache modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
 
       - name: Running tests
         run: npm run test:react-coverage -- --watchAll=false
