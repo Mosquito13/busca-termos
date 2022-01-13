@@ -12,7 +12,7 @@ const config = {
   coverageDirectory: '<rootDir>/coverage/electron/',
   coverageThreshold: {
     global: {
-      branches: 0,
+      branches: 90,
       functions: 0,
       lines: 0,
       statements: 0
