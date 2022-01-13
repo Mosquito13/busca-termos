@@ -7,22 +7,23 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  setup:
+    name: Install dependencies
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14'
         cache: 'npm'
     - run: npm install
+
+  test-api:
+    name: API Tests
+    runs-on: ubuntu-latest
     - run: npm run test:api
+
+  test-react:
+    name: React Tests
+    runs-on: ubuntu-latest
     - run: npm run test:react-coverage -- --watchAll=false
-    
