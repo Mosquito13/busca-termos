@@ -18,12 +18,12 @@ jobs:
         cache: 'npm'
     - run: npm install
 
-  test-api:
+  testapi:
     name: API Tests
     runs-on: ubuntu-latest
     - run: npm run test:api
 
-  test-react:
+  testreact:
     name: React Tests
     runs-on: ubuntu-latest
     - run: npm run test:react-coverage -- --watchAll=false
