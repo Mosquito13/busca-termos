@@ -8,27 +8,39 @@ on:
 
 jobs:
   setup:
-    name: Install dependencies
+    name: Setup
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+
       - name: Setup node 14
         uses: actions/setup-node@v2
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm install
+
+      - name: Cache modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install modules
+        run: npm install
 
   test_api:
     name: API Tests
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - run: npm run test:api
+      - name: Running tests
+        run: npm run test:api
 
   test_react:
     name: React Tests
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - run: npm run test:react-coverage -- --watchAll=false
+      - name: Running tests
+        run: npm run test:react-coverage -- --watchAll=false
