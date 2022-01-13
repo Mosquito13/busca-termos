@@ -20,12 +20,14 @@ jobs:
 
   test_api:
     name: API Tests
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - run: npm run test:api
 
   test_react:
     name: React Tests
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - run: npm run test:react-coverage -- --watchAll=false
