@@ -1,15 +1,14 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList } from 'react-window';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { SMALL, AUTO } from './TableCell';
 import EmptyState from './EmptyState';
 import TableRow from './TableRow';
 
 import coreActions from '../../../actions/core';
-import coreSelectors from '../../../selectors/core';
 
 import './styles.scss';
 
@@ -17,11 +16,13 @@ const isOdd = (index) => index % 2 !== 0;
 
 const Table = ({ data, columns, idField }) => {
   const dispatch = useDispatch();
-  const selectedItemId = useSelector(coreSelectors.getSelectedItemId);
-  const onSelectRow = useCallback(
-    (id) => dispatch(coreActions.setSelectedItemId(id)),
-    [dispatch]
-  );
+  const [selectedCell, setSelectedCell] = useState(null);
+
+  const onSelect = useCallback((itemId, cellId, cellValue) => {
+    window.navigator.clipboard.writeText(cellValue);
+    setSelectedCell(cellId);
+    dispatch(coreActions.setSelectedItemId(itemId));
+  }, [dispatch]);
 
   return (
     <div className="table">
@@ -45,8 +46,8 @@ const Table = ({ data, columns, idField }) => {
                       data={data[index]}
                       columns={columns}
                       odd={isOdd(index)}
-                      onSelect={onSelectRow}
-                      selected={selectedItemId === data[index][idField]}
+                      onSelect={onSelect}
+                      selectedCell={selectedCell}
                       idField={idField}
                     />
                   </div>

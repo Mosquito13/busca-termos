@@ -7,6 +7,7 @@
     border: 1px solid $color-secondary-dark;
     border-radius: $radius;
     overflow: hidden;
+    user-select: none;
 
     &__header {
         flex: 0;
@@ -20,8 +21,22 @@
     &__row {
         display: flex;
         height: 3rem;
+
+        &--header,
+        &--header:hover {
+            background-color: darken($color-primary-dark, 5%);
+            color: $color-secondary-dark;
+        }
+    }
+
+    &__cell {
+        flex: 1;
+        display: flex;
         align-items: center;
-        transition: all .2s;
+        overflow: hidden;
+        padding-left: 1rem;
+        position: relative;
+        box-shadow: inset 0 0 5px 3px $color-primary-dark;
 
         &:hover {
             background-color: $color-secondary-dark;
@@ -30,11 +45,17 @@
 
         &--odd {
             background-color: lighten($color-primary-dark, 5%);
+            box-shadow: inset 0 0 5px 3px lighten($color-primary-dark, 5%);
+        }
+
+        &--small {
+            flex: 0 0 8rem;
         }
 
         &--header,
         &--header:hover {
-            background-color: darken($color-primary-dark, 5%);
+            background-color: transparent;
+            box-shadow: none;
             color: $color-secondary-dark;
         }
 
@@ -43,16 +64,11 @@
         }
     }
 
-    &__cell {
-        flex: 1;
-        padding-left: 1rem;
+    &__cell-text {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-
-        &--small {
-            flex: 0 0 8rem;
-        }
+        cursor: default;
     }
 
     &__empty-state {

@@ -18,13 +18,20 @@ import coreSelectors from '../../selectors/core';
 import coreActions from '../../actions/core';
 
 import './styles.scss';
+import { useRef } from 'react';
+import useKeyboardShortcut from 'use-keyboard-shortcut';
 
 const Main = () => {
+  const searchFieldRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isValid = useSelector(settingsSelectors.isValid);
   const isLoading = useSelector(coreSelectors.isLoading);
   const [searchValue, setSearchValue] = useState('');
+
+  const focusSearchField = useCallback(() => searchFieldRef.current.focus(), []);
+
+  useKeyboardShortcut(['Control', 'F'], focusSearchField, { ignoreInputFields: false });
 
   useEffect(() => dispatch(settingsActions.loadSettings()), [dispatch]);
 
@@ -33,6 +40,12 @@ const Main = () => {
       navigate('/configNotFound');
     }
   }, [isValid, navigate]);
+
+  useEffect(() => {
+    if (!isLoading && searchFieldRef.current) {
+      focusSearchField();
+    }
+  }, [isLoading, focusSearchField]);
 
   const onClickAbout = useCallback(() => navigate('/about'), [navigate]);
   const onClickSettings = useCallback(() => navigate('/settings'), [navigate]);
@@ -69,6 +82,7 @@ const Main = () => {
           <div className="main__left">
             <div className="main__search">
               <InputText
+                ref={searchFieldRef}
                 placeholder="Procurar por..."
                 value={searchValue}
                 onChange={handleChange}

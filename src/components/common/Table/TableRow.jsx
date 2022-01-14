@@ -3,17 +3,23 @@ import classNames from 'classnames';
 
 import TableCell, { SMALL, AUTO } from './TableCell';
 
-const buildCells = (header, columns, data, onSelect) =>
+const buildCells = (header, columns, data, onSelect, selectedCell, idField, odd) =>
   columns.map(({ title, dataKey, size }) => {
     const keyPrefix = header ? 'head_' : 'col_';
     const value = header ? title : data[dataKey];
+    const cellId = `{${data?.[idField]}_${dataKey}}`;
 
     return (
       <TableCell
         key={`${keyPrefix}${dataKey}`}
+        id={cellId}
+        itemId={data?.[idField]}
         size={size}
         value={value}
+        header={header}
         onSelect={onSelect}
+        selected={selectedCell === cellId}
+        odd={odd}
       />
     );
   });
@@ -23,20 +29,18 @@ const TableRow = ({
   columns,
   data,
   odd,
-  selected,
+  selectedCell,
   onSelect,
   idField
 }) => {
   const classes = classNames(
     'table__row',
-    odd && 'table__row--odd',
-    header && 'table__row--header',
-    selected && 'table__row--selected'
+    header && 'table__row--header'
   );
 
   return (
-    <div className={classes} onClick={() => onSelect?.(data[idField])}>
-      {buildCells(header, columns, data, onSelect)}
+    <div className={classes}>
+      {buildCells(header, columns, data, onSelect, selectedCell, idField, odd)}
     </div>
   );
 };

@@ -31,7 +31,7 @@ const AppFrame = () => {
   return (
     <div className="app-frame">
       <div className="app-frame__title">
-        <div className="app-frame__title-icon"><AppIcon /></div>
+        <div className="app-frame__title-icon" onDoubleClick={onClose}><AppIcon /></div>
       </div>
       <div className="app-frame__buttons">
         <FrameButton

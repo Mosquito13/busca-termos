@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './styles.scss';
+import { forwardRef } from 'react';
 
-const InputText = ({ value, placeholder, onChange, disabled, leftAppend }) => {
+const InputText = forwardRef(({ value, placeholder, onChange, disabled, leftAppend }, ref) => {
   const classes = classNames(
     'input-text__input',
     disabled && 'input-text__input--disabled',
@@ -19,6 +20,7 @@ const InputText = ({ value, placeholder, onChange, disabled, leftAppend }) => {
         <div className="input-text__left-append">{leftAppend}</div>
       )}
       <input
+        ref={ref}
         className={classes}
         type="text"
         value={value}
@@ -29,7 +31,7 @@ const InputText = ({ value, placeholder, onChange, disabled, leftAppend }) => {
       />
     </div>
   );
-};
+});
 
 InputText.propTypes = {
   /**
