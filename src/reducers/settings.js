@@ -15,6 +15,7 @@ const initial = {
   languageFolder: '',
   mainLanguage: languageMapping.BRAZIL.id,
   translation: translationInitial,
+  compactLayout: false,
   darkTheme: true
 };
 
@@ -43,6 +44,9 @@ const settingsReducer = (state = initial, action) => {
 
     case actionTypes.SET_MAIN_LANGUAGE:
       return { ...state, mainLanguage: action.value };
+
+    case actionTypes.TOGGLE_COMPACT_LAYOUT:
+      return { ...state, compactLayout: action.value };
 
     case actionTypes.TOGGLE_DARK_THEME:
       return { ...state, darkTheme: action.value };

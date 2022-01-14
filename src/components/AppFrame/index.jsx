@@ -14,6 +14,7 @@ import frameActions from '../../actions/frame';
 import frameSelectors from '../../selectors/frame';
 
 import './styles.scss';
+import { useEffect } from 'react';
 
 const AppFrame = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,10 @@ const AppFrame = () => {
     }
     return dispatch(frameActions.maximize());
   }, [dispatch, isMaximized]);
+
+  useEffect(() => {
+    dispatch(frameActions.registerFrameListeners());
+  }, [dispatch]);
 
   return (
     <div className="app-frame">

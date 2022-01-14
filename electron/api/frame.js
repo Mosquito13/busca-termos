@@ -15,5 +15,17 @@ module.exports = {
 
   unmaximize() {
     ipcRenderer.invoke('unmaximize');
+  },
+
+  registerMaximizeListener(callback) {
+    ipcRenderer.on('maximize', () => {
+      callback();
+    });
+  },
+
+  registerUnmaximizeListener(callback) {
+    ipcRenderer.on('unmaximize', () => {
+      callback();
+    });
   }
 };

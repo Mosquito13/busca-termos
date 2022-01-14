@@ -5,6 +5,7 @@ const actions = {
   SET_LANGUAGE_FOLDER: 'BuscaTermos/Settings/set_language_folder',
   TOGGLE_TRANSLATION: 'BuscaTermos/Settings/toggle_translation',
   TOGGLE_DARK_THEME: 'BuscaTermos/Settings/toggle_dark_theme',
+  TOGGLE_COMPACT_LAYOUT: 'BuscaTermos/Settings/toggle_compact_layout',
   SET_MAIN_LANGUAGE: 'BuscaTermos/Settings/set_main_language',
   SET_VALIDATING: 'BuscaTermos/Settings/set_validating',
   SET_SETTINGS: 'BuscaTermos/Settings/set_settings',

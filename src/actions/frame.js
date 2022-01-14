@@ -18,16 +18,22 @@ const frameActions = {
   },
 
   maximize() {
-    return (dispatch) => {
-      dispatch(this.setMaximized(true));
-      apiUtils.maximize();
-    };
+    return () => apiUtils.maximize();
   },
 
   unmaximize() {
+    return () => apiUtils.unmaximize();
+  },
+
+  registerFrameListeners() {
     return (dispatch) => {
-      dispatch(this.setMaximized(false));
-      apiUtils.unmaximize();
+      apiUtils.registerMaximizeListener(() => {
+        dispatch(this.setMaximized(true));
+      });
+
+      apiUtils.registerUnmaximizeListener(() => {
+        dispatch(this.setMaximized(false));
+      });
     };
   }
 };

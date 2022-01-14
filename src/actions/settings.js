@@ -47,6 +47,13 @@ const settingsActions = {
     };
   },
 
+  toggleCompactLayout(value) {
+    return {
+      type: actionTypes.TOGGLE_COMPACT_LAYOUT,
+      value
+    };
+  },
+
   toggleDarkTheme(value) {
     return {
       type: actionTypes.TOGGLE_DARK_THEME,

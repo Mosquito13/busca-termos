@@ -13,6 +13,10 @@ const settingsSelectors = {
     return getSlice(state).darkTheme;
   },
 
+  isCompactLayout(state) {
+    return getSlice(state).compactLayout;
+  },
+
   getMainLanguage(state) {
     return getSlice(state).mainLanguage;
   },

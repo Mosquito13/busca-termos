@@ -23,6 +23,14 @@ const apiUtils = {
 
   async close() {
     window.API.close();
+  },
+
+  async registerMaximizeListener(callback) {
+    window.API.registerMaximizeListener(callback);
+  },
+
+  async registerUnmaximizeListener(callback) {
+    window.API.registerUnmaximizeListener(callback);
   }
 };
 
