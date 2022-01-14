@@ -66,7 +66,7 @@ if (!gotTheLock) {
   });
 }
 
-ipcMain.handle('close', () => appWindow.close());
-ipcMain.handle('minimize', () => appWindow.minimize());
-ipcMain.handle('maximize', () => appWindow.maximize());
-ipcMain.handle('unmaximize', () => appWindow.unmaximize());
+ipcMain.on('close', () => appWindow.close());
+ipcMain.on('minimize', () => appWindow.minimize());
+ipcMain.on('maximize', () => appWindow.maximize());
+ipcMain.on('unmaximize', () => appWindow.unmaximize());
