@@ -1,5 +1,5 @@
 const ipcRenderer = {
-  invoke: jest.fn()
+  send: jest.fn()
 };
 
 exports.ipcRenderer = ipcRenderer;

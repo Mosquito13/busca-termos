@@ -2,19 +2,19 @@ const { ipcRenderer } = require('electron');
 
 module.exports = {
   close() {
-    ipcRenderer.invoke('close');
+    ipcRenderer.send('close');
   },
 
   minimize() {
-    ipcRenderer.invoke('minimize');
+    ipcRenderer.send('minimize');
   },
 
   maximize() {
-    ipcRenderer.invoke('maximize');
+    ipcRenderer.send('maximize');
   },
 
   unmaximize() {
-    ipcRenderer.invoke('unmaximize');
+    ipcRenderer.send('unmaximize');
   },
 
   registerMaximizeListener(callback) {
