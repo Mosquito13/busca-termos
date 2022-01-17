@@ -5,20 +5,17 @@ import classNames from 'classnames';
 import './styles.scss';
 import { forwardRef } from 'react';
 
-const InputText = forwardRef(({ value, placeholder, onChange, disabled, leftAppend }, ref) => {
+const InputText = forwardRef(({ value, placeholder, onChange, disabled, borderless }, ref) => {
   const classes = classNames(
     'input-text__input',
     disabled && 'input-text__input--disabled',
-    leftAppend && 'input-text__input--with-left-append'
+    borderless && 'input-text__input--borderless'
   );
 
   const handleChange = useCallback((event) => onChange(event.target.value), [onChange]);
 
   return (
     <div className="input-text">
-      {leftAppend && (
-        <div className="input-text__left-append">{leftAppend}</div>
-      )}
       <input
         ref={ref}
         className={classes}

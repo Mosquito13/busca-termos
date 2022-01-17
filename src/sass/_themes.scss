@@ -3,7 +3,7 @@ $themes: (
     color-base: $color-base-light,
     color-base-darker: darken($color-base-light, 15%),
     color-base-lighter: lighten($color-base-light, 5%),
-    color-table-hover: lighten($color-contrast-light, 15%),
+    color-table-hover: lighten($color-contrast-light, 10%),
     color-text: $color-text-light,
     color-text-disabled: $color-detail-light,
     color-text-selection: $color-base-light,

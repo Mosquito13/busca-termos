@@ -40,7 +40,7 @@ const Table = ({ data, columns, idField }) => {
               <FixedSizeList
                 width={width}
                 height={height}
-                itemSize={compactLayout ? 27 : 30}
+                itemSize={compactLayout ? 24 : 30}
                 itemCount={data.length}
               >
                 {({ index, style }) => (

@@ -3,6 +3,17 @@
 .translation-field {
     display: flex;
 
+    &__flag {
+        flex: 0 0 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include themify() {
+            background-color: themed('color-base-darker');
+            border-right: 1px solid themed('color-border');
+        }
+    }
+
     &__icon {
         filter: drop-shadow(0 0 3px $color-black) opacity(.8);
     }

@@ -12,7 +12,7 @@ import './styles.scss';
 
 const TranslationField = ({ id, title, FlagIcon }) => {
   const dispatch = useDispatch();
-  const translation = useSelector(state => translationSelectors.getTranslation(state, id));
+  const translation = useSelector((state) => translationSelectors.getTranslation(state, id));
   const selectedTermId = useSelector(coreSelectors.getSelectedItemId);
 
   useEffect(() => {
@@ -23,14 +23,15 @@ const TranslationField = ({ id, title, FlagIcon }) => {
 
   return (
     <div className="translation-field">
+      <div className="translation-field__flag">
+        <div className="translation-field__icon" title={title}>
+          <Icon size={SMALL}>{FlagIcon}</Icon>
+        </div>
+      </div>
       <InputText
-        leftAppend={
-          <div className="translation-field__icon" title={title}>
-            <Icon size={SMALL}>{FlagIcon}</Icon>
-          </div>
-        }
         placeholder="Selecione um item na lista"
         value={translation}
+        borderless
         disabled
       />
     </div>

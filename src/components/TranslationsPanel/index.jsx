@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import orderBy from 'lodash/orderBy';
+import chunk from 'lodash/chunk';
 
 import { languageMapping } from '../../mapping/languages';
 import TranslationField from '../TranslationField';
-import Heading4 from '../common/Heading4';
 
 import settingsSelectors from '../../selectors/settings';
 
@@ -29,13 +29,21 @@ const TranslationsPanel = () => {
     }
   });
 
+  const fieldsChunks = chunk(fields, 3);
+
   return (
     <div className="translations-panel">
       <div className="translations-panel__header">
         {'Traduções'}
       </div>
       <div className="translations-panel__fields">
-        {fields}
+        {fieldsChunks.map((fieldsChunk, idx) => {
+          return (
+            <div key={idx} className="translations-panel__field-row">
+              {fieldsChunk.map(field => field)}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

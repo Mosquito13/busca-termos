@@ -91,25 +91,28 @@
     &__empty-state {
         height: 100%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     &__empty-state-image-wrapper {
-        overflow: hidden;
-        margin-top: 3rem;
-        max-height: 0rem;
-        transition: max-height 1s ease-in;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        max-height: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 1s;
 
         &--open {
-            max-height: 30rem;
+            opacity: 1;
         }
     }
 
     &__empty-state-image {
-        height: 30rem;
-        filter: opacity(.2);
+        height: 25rem;
+        filter: opacity(.3);
 
         svg {
             width: 100%;

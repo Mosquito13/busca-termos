@@ -1,3 +1,9 @@
+@mixin small-height-app() {
+    @media (max-height: 749px) {
+        @content;
+    }
+}
+
 @mixin themify($use-current: false) {
     @each $theme, $map in $themes {
         $selector: '.theme--#{$theme} &';
@@ -21,3 +27,4 @@
 @function themed($key) {
     @return map-get($theme-map, $key);
 }
+

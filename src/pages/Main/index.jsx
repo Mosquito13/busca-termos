@@ -1,7 +1,8 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useRef, useEffect, useState, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { FiInfo, FiSettings } from 'react-icons/fi';
+import useKeyboardShortcut from 'use-keyboard-shortcut';
 import debounce from 'lodash/debounce';
 
 import Icon from '../../components/common/Icon';
@@ -18,8 +19,6 @@ import coreSelectors from '../../selectors/core';
 import coreActions from '../../actions/core';
 
 import './styles.scss';
-import { useRef } from 'react';
-import useKeyboardShortcut from 'use-keyboard-shortcut';
 
 const Main = () => {
   const searchFieldRef = useRef();
@@ -62,7 +61,18 @@ const Main = () => {
     <>
       <div className="main">
         <div className="main__header">
-          <Heading1>{'Busca Termos'}</Heading1>
+          <div className="main__header-title">
+            <Heading1>{'Busca Termos'}</Heading1>
+          </div>
+          <div className="main__header-search">
+            <InputText
+              ref={searchFieldRef}
+              placeholder="Procurar por..."
+              value={searchValue}
+              onChange={handleChange}
+              disabled={isLoading}
+            />
+          </div>
           <div className="main__header-buttons">
             <Button
               borderless
@@ -78,24 +88,11 @@ const Main = () => {
             />
           </div>
         </div>
-        <div className="main__content">
-          <div className="main__left">
-            <div className="main__search">
-              <InputText
-                ref={searchFieldRef}
-                placeholder="Procurar por..."
-                value={searchValue}
-                onChange={handleChange}
-                disabled={isLoading}
-              />
-            </div>
-            <div className="main__table">
-              <LanguageTable />
-            </div>
-          </div>
-          <div className="main__right">
-            <TranslationsPanel />
-          </div>
+        <div className="main__table">
+          <LanguageTable />
+        </div>
+        <div className="main__translations">
+          <TranslationsPanel />
         </div>
       </div>
       <Loading loading={isLoading} />
