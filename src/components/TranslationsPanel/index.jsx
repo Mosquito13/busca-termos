@@ -32,7 +32,7 @@ const TranslationsPanel = () => {
   return (
     <div className="translations-panel">
       <div className="translations-panel__header">
-        <Heading4>{'Traduções'}</Heading4>
+        {'Traduções'}
       </div>
       <div className="translations-panel__fields">
         {fields}

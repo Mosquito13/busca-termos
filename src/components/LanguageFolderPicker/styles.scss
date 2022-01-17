@@ -11,12 +11,14 @@
     &__error {
         display: flex;
         align-items: center;
-        color: $color-danger-dark;
         font-size: 1.2rem;
         padding: .5rem .5rem 0;
         height: 1.5rem;
         opacity: 1;
         transition: height .2s ease-out, opacity .5s;
+        @include themify() {
+            color: themed('color-danger');
+        }
 
         &--hidden {
             height: 0;

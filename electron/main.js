@@ -13,9 +13,9 @@ if (!gotTheLock) {
 } else {
   const createWindow = () => {
     const win = new BrowserWindow({
-      width: 800,
+      width: 900,
       height: 800,
-      minWidth: 750,
+      minWidth: 900,
       minHeight: 800,
       frame: false,
       show: false,

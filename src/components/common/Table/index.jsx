@@ -9,14 +9,17 @@ import EmptyState from './EmptyState';
 import TableRow from './TableRow';
 
 import coreActions from '../../../actions/core';
+import settingsSelectors from '../../../selectors/settings';
 
 import './styles.scss';
+import { useSelector } from 'react-redux';
 
 const isOdd = (index) => index % 2 !== 0;
 
 const Table = ({ data, columns, idField }) => {
   const dispatch = useDispatch();
   const [selectedCell, setSelectedCell] = useState(null);
+  const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
   const onSelect = useCallback((itemId, cellId, cellValue) => {
     window.navigator.clipboard.writeText(cellValue);
@@ -37,7 +40,7 @@ const Table = ({ data, columns, idField }) => {
               <FixedSizeList
                 width={width}
                 height={height}
-                itemSize={30}
+                itemSize={compactLayout ? 27 : 30}
                 itemCount={data.length}
               >
                 {({ index, style }) => (

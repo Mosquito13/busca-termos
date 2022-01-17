@@ -1,11 +1,13 @@
 body {
-    font-family: 'Rubik', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1.6rem;
-    color: $color-secondary-dark;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
 
-    ::selection {
-        background-color: $color-alternative-dark;
-    }
+*::selection {
+  @include themify() {
+    background-color: themed('color-contrast');
+    color: themed('color-text-selection');
+  }
 }

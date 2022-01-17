@@ -3,15 +3,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $color-secondary-dark;
+  @include themify() {
+    background-color: themed('color-border');
+  }
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-primary-dark;
-  border: 2px solid $color-secondary-dark;
+  @include themify() {
+    background-color: themed('color-base');
+    border: 2px solid themed('color-border');
+  }
   border-radius: $radius;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: $color-detail-dark;
+  @include themify() {
+    background-color: themed('color-text');
+  }
 }

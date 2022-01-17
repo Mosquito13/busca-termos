@@ -7,7 +7,12 @@
 }
 
 html {
+  // Fallback for base layout component
   font-size: 62.5%;
+
+  &.compact {
+    font-size: 56.25%;
+  }
 }
 
 body {

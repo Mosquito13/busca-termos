@@ -50,6 +50,7 @@ const Settings = () => {
   const darkTheme = useSelector(settingsSelectors.isDarkTheme);
   const translation = useSelector(settingsSelectors.getTranslation);
   const mainLanguage = useSelector(settingsSelectors.getMainLanguage);
+  const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
   const onClickApply = useCallback(() => {
     dispatch(coreActions.setLoading(true));
@@ -60,6 +61,10 @@ const Settings = () => {
   const onChangeDarkTheme = useCallback(() => {
     dispatch(settingsActions.toggleDarkTheme(!darkTheme));
   }, [dispatch, darkTheme]);
+
+  const onChangeCompactLayout = useCallback(() => {
+    dispatch(settingsActions.toggleCompactLayout(!compactLayout));
+  }, [dispatch, compactLayout]);
 
   const onChangeMainLanguage = useCallback((value) => {
     dispatch(settingsActions.setMainLanguage(value));
@@ -78,10 +83,16 @@ const Settings = () => {
         <Fieldset title="Aparência" noMarginTop>
           <div className="settings__field">
             <Toggle
-              disabled
               label="Tema escuro"
               value={darkTheme}
               onChange={onChangeDarkTheme}
+            />
+          </div>
+          <div className="settings__field">
+            <Toggle
+              label="Tema compacto"
+              value={compactLayout}
+              onChange={onChangeCompactLayout}
             />
           </div>
         </Fieldset>

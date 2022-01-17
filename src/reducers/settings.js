@@ -20,9 +20,10 @@ const initial = {
 };
 
 const getNewSettings = (state, values) => {
-  const { languageFolder, mainLanguage, translation, darkTheme } = state;
+  const { languageFolder, mainLanguage, translation, compactLayout, darkTheme } = state;
   const currentSettings = {
     languageFolder,
+    compactLayout,
     mainLanguage,
     translation,
     darkTheme

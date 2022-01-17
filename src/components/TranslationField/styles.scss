@@ -1,7 +1,9 @@
+@import '../../sass/styles.scss';
+
 .translation-field {
     display: flex;
 
     &__icon {
-        filter: drop-shadow(0 0 3px black) opacity(.8);
+        filter: drop-shadow(0 0 3px $color-black) opacity(.8);
     }
 }

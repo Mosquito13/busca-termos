@@ -2,9 +2,7 @@
 
 .button {
     background-color: transparent;
-    border: 1px solid $color-secondary-dark;
     border-radius: $radius;
-    color: $color-secondary-dark;
     font-size: inherit;
     font-family: inherit;
     white-space: nowrap;
@@ -17,25 +15,36 @@
     transition: all .2s;
     height: 4rem;
 
+    @include themify() {
+        border: 1px solid themed('color-text');
+        color: themed('color-text');
+    }
+
     &:focus {
-        box-shadow: 0px 0px 5px $color-secondary-dark;
+        @include themify() {
+            box-shadow: 0px 0px 5px themed('color-text');
+        }
     }
 
     &:hover {
-        color: $color-primary-dark;
-        background-color: $color-secondary-dark;
-        box-shadow: 0px 0px 5px $color-secondary-dark;
+        @include themify() {
+            color: themed('color-base');
+            background-color: themed('color-text');
+            box-shadow: 0px 0px 5px themed('color-text');
+        }
     }
 
     &:active {
-        color: $color-primary-dark;
-        background-color: darken($color-secondary-dark, 5%);
-        box-shadow: 0px 0px 3px darken($color-secondary-dark, 5%);
+        @include themify() {
+            color: themed('color-base');
+            background-color: themed('color-text');
+            box-shadow: 0px 0px 3px themed('color-text');
+        }
         transform: translateY(1px);
     }
 
     &--borderless {
-        border-color: transparent;
+        border-color: transparent !important;
         box-shadow: none;
     }
 
@@ -47,16 +56,21 @@
 
     &--disabled {
         box-shadow: none;
-        color: $color-detail-dark;
-        border-color: $color-detail-dark;
-        cursor: default;
+        cursor: not-allowed;
+
+        @include themify() {
+            color: themed('color-text-disabled');
+            border-color: themed('color-text-disabled');
+        }
 
         &:hover,
         &:active {
-            box-shadow: none;
-            background-color: transparent;
-            color: $color-detail-dark;
-            transform: none;
+            @include themify() {
+                color: themed('color-text-disabled');
+                background-color: transparent;
+                box-shadow: none;
+                transform: none;
+            }
         }
     }
 
@@ -69,6 +83,6 @@
     }
 
     &--disabled:active > &__content {
-        transform: none;
+        transform: none !important;
     }
 }

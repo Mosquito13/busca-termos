@@ -9,29 +9,33 @@
         flex: 1;
         height: 4rem;
         min-width: 4rem;
-        border: 1px solid $color-secondary-dark;
+        border: 1px solid currentColor;
         outline: none;
         padding: 0 1rem;
         background-color: transparent;
-        color: $color-secondary-dark;
+        color: currentColor;
         font-family: inherit;
         font-size: inherit;
         transition: all .2s;
         border-radius: $radius;
 
         &::placeholder {
-            color: $color-detail-dark;
+            @include themify() {
+                color: themed('color-text-disabled');
+            }
         }
 
         &:hover,
         &:focus,
         &:active {
-            box-shadow: 0px 0px 5px $color-secondary-dark;
+            box-shadow: 0px 0px 5px currentColor;
         }
 
         &--disabled {
             box-shadow: none;
-            border-color: $color-detail-dark;
+            @include themify() {
+                border-color: themed('color-text-disabled');
+            }
 
             &:hover,
             &:focus,
@@ -47,8 +51,11 @@
     }
 
     &__left-append {
-        background-color: darken($color-primary-dark, 5%);
-        border: 1px solid $color-detail-dark;
+        @include themify() {
+            background-color: themed('color-base-darker');
+            border: 1px solid themed('color-text-disabled');
+            border-right: none;
+        }
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
         flex: 0 0 4rem;
@@ -56,8 +63,4 @@
         align-items: center;
         justify-content: center;
     }
-}
-
-.input-text {
-    
 }

@@ -11,10 +11,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color-primary-dark;
     transition: all .2s;
     opacity: 1;
     visibility: visible;
+    @include themify() {
+        background-color: themed('color-base');
+    }
 
     &__icon {
         transform: translate(-10rem, -5rem);

@@ -16,7 +16,9 @@
         cursor: pointer;
 
         &--checked {
-            background-color: $color-alternative-dark;
+            @include themify() {
+                background-color: themed('color-contrast');
+            }
         }
 
         &--disabled {

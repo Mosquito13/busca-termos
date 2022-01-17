@@ -4,19 +4,24 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: lighten($color-primary-dark, 5%);
-    border: 1px solid darken($color-primary-dark, 5%);
-    box-shadow: 0 0 10px rgba(black, .3);
+    box-shadow: 0 0 10px rgba($color-black, .3);
     border-radius: $radius;
     overflow: hidden;
+    @include themify() {
+        background-color: themed('color-base-lighter');
+        border: 1px solid themed('color-border');
+    }
 
     &__header {
-        flex: 0 0 calc(4rem - 1px);
-        border-bottom: 1px solid darken($color-primary-dark, 5%);
+        flex: 0 0 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: darken($color-primary-dark, 5%);
+        box-sizing: content-box;
+        @include themify() {
+            border-bottom: 1px solid themed('color-border');
+            background-color: themed('color-base-darker');
+        }
     }
 
     &__fields {

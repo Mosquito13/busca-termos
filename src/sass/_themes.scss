@@ -1,0 +1,34 @@
+$themes: (
+  light: (
+    color-base: $color-base-light,
+    color-base-darker: darken($color-base-light, 15%),
+    color-base-lighter: lighten($color-base-light, 5%),
+    color-table-hover: lighten($color-contrast-light, 15%),
+    color-text: $color-text-light,
+    color-text-disabled: $color-detail-light,
+    color-text-selection: $color-base-light,
+    color-border: $color-detail-light,
+    color-contrast: $color-contrast-light,
+    color-danger: $color-danger-light,
+    color-app-bar: $color-contrast-light,
+    color-app-bar-text: $color-base-light,
+    color-app-bar-hover: lighten($color-contrast-light, 15%),
+    color-app-bar-close: $color-danger-light,
+  ),
+  dark: (
+    color-base: $color-base-dark,
+    color-base-darker: darken($color-base-dark, 5%),
+    color-base-lighter: lighten($color-base-dark, 5%),
+    color-table-hover: lighten($color-base-dark, 50%),
+    color-text: $color-text-dark,
+    color-text-disabled: $color-detail-dark,
+    color-text-selection: $color-base-dark,
+    color-border: $color-detail-dark,
+    color-contrast: $color-contrast-dark,
+    color-danger: $color-danger-dark,
+    color-app-bar: darken($color-base-dark, 5%),
+    color-app-bar-text: $color-text-dark,
+    color-app-bar-hover: lighten($color-base-dark, 5%),
+    color-app-bar-close: $color-danger-dark
+  )
+);
