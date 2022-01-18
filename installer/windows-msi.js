@@ -1,7 +1,9 @@
+const fs = require('fs');
 const path = require('path');
 const msi = require('electron-wix-msi');
 
 const baseDir = process.cwd();
+const version = fs.readFileSync(path.join(baseDir, 'version'));
 
 const msiCreator = new msi.MSICreator({
   appDirectory: path.join(baseDir, 'dist', 'win-unpacked'),
@@ -14,7 +16,7 @@ const msiCreator = new msi.MSICreator({
   ui: {
     chooseDirectory: true
   },
-  version: '1.0.0',
+  version: version.toString(),
   arch: 'x64'
 });
 
