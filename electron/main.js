@@ -1,6 +1,7 @@
 const path = require('path');
 
 const { app, BrowserWindow, ipcMain } = require('electron');
+const windowStateKeeper = require('electron-window-state');
 const isDev = require('electron-is-dev');
 
 let appWindow = null;
@@ -12,9 +13,18 @@ if (!gotTheLock) {
   app.quit();
 } else {
   const createWindow = () => {
+    const windowState = windowStateKeeper({
+      defaultHeight: 750,
+      defaultWidth: 900,
+      fullScreen: false,
+      maximize: false
+    });
+
     const win = new BrowserWindow({
-      width: 900,
-      height: 750,
+      height: windowState.height,
+      width: windowState.width,
+      x: windowState.x,
+      y: windowState.y,
       minWidth: 900,
       minHeight: 650,
       frame: false,
@@ -37,6 +47,8 @@ if (!gotTheLock) {
     win.on('maximize', () => win.webContents.send('maximize'));
     win.on('unmaximize', () => win.webContents.send('unmaximize'));
     win.on('system-context-menu', (e) => e.preventDefault());
+
+    windowState.manage(win);
 
     return win;
   };
