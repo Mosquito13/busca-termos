@@ -31,6 +31,10 @@ const apiUtils = {
 
   async registerUnmaximizeListener(callback) {
     window.API.registerUnmaximizeListener(callback);
+  },
+
+  async closeSplashAndShowApp() {
+    window.API.closeSplashAndShowApp();
   }
 };
 

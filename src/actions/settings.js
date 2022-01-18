@@ -89,6 +89,8 @@ const settingsActions = {
 
   loadSettings() {
     return async (dispatch) => {
+      apiUtils.closeSplashAndShowApp();
+
       const settings = storageUtils.getSettings();
       const isValid = await apiUtils.validateLanguageFolder(settings?.languageFolder);
 

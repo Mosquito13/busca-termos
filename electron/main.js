@@ -5,6 +5,7 @@ const windowStateKeeper = require('electron-window-state');
 const isDev = require('electron-is-dev');
 
 let appWindow = null;
+let splashWindow = null;
 
 const appIcon = path.join(__dirname, 'assets', 'img', 'icon32.png');
 const gotTheLock = app.requestSingleInstanceLock();
@@ -12,6 +13,21 @@ const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
   app.quit();
 } else {
+  const createSplash = () => {
+    const splashWin = new BrowserWindow({
+      width: 300,
+      height: 250,
+      frame: false,
+      transparent: true,
+      alwaysOnTop: true
+    });
+
+    splashWin.loadFile('./electron/splash/index.html');
+    splashWin.center();
+
+    return splashWin;
+  };
+
   const createWindow = () => {
     const windowState = windowStateKeeper({
       defaultHeight: 750,
@@ -30,7 +46,7 @@ if (!gotTheLock) {
       frame: false,
       show: false,
       icon: appIcon,
-      title: 'Busca Termos',
+      title: 'BuscaTermos',
       webPreferences: {
         preload: path.join(__dirname, 'preload.js')
       }
@@ -38,7 +54,7 @@ if (!gotTheLock) {
 
     if (isDev) {
       win.loadURL('http://localhost:3000');
-      win.webContents.openDevTools({ mode: 'detach' });
+      // win.webContents.openDevTools({ mode: 'detach' });
     } else {
       win.loadFile('./build/index.html');
     }
@@ -70,13 +86,15 @@ if (!gotTheLock) {
   });
 
   app.whenReady().then(() => {
+    splashWindow = createSplash();
     appWindow = createWindow();
-
-    appWindow.once('ready-to-show', () => {
-      appWindow.show();
-    });
   });
 }
+
+ipcMain.on('show-app', () => {
+  splashWindow.close();
+  appWindow.show();
+});
 
 ipcMain.on('close', () => appWindow.close());
 ipcMain.on('minimize', () => appWindow.minimize());

@@ -1,6 +1,10 @@
 const { ipcRenderer } = require('electron');
 
 module.exports = {
+  closeSplashAndShowApp() {
+    ipcRenderer.send('show-app');
+  },
+
   close() {
     ipcRenderer.send('close');
   },
