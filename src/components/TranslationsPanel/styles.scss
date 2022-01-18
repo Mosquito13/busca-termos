@@ -1,77 +1,77 @@
 @import '../../sass/styles.scss';
 
 .translations-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba($color-black, 0.3);
+  border-radius: $radius;
+  overflow: hidden;
+  @include themify() {
+    background-color: themed('color-base-lighter');
+    border: 1px solid themed('color-border');
+  }
+
+  &__header {
+    flex: 0 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    @include themify() {
+      border-bottom: 1px solid themed('color-border');
+      background-color: themed('color-base-darker');
+    }
+  }
+
+  &__fields {
     flex: 1;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba($color-black, .3);
-    border-radius: $radius;
+    padding: 0.5rem;
+
+    @include small-height-app() {
+      padding: 0;
+    }
+  }
+
+  &__field-row {
+    display: flex;
+
+    &:not(:last-child) {
+      @include small-height-app() {
+        @include themify() {
+          border-bottom: 1px solid themed('color-border');
+        }
+      }
+    }
+  }
+
+  &__field-row > &__field:nth-child(1),
+  &__field-row > &__field:nth-child(2) {
+    @include small-height-app() {
+      @include themify() {
+        border-right: 1px solid themed('color-border');
+      }
+    }
+  }
+
+  &__field {
+    flex: 0 0 calc(33.333% - 1rem);
+    margin: 0.5rem;
     overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $radius;
     @include themify() {
-        background-color: themed('color-base-lighter');
-        border: 1px solid themed('color-border');
+      border-color: themed('color-border');
+      background-color: themed('color-base');
     }
 
-    &__header {
-        flex: 0 0 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: content-box;
-        @include themify() {
-            border-bottom: 1px solid themed('color-border');
-            background-color: themed('color-base-darker');
-        }
+    @include small-height-app() {
+      margin: 0;
+      border-radius: 0;
+      border: none;
     }
-
-    &__fields {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding: .5rem;
-
-        @include small-height-app() {
-            padding: 0;
-        }
-    }
-
-    &__field-row {
-        display: flex;
-
-        &:not(:last-child) {
-            @include small-height-app() {
-                @include themify() {
-                    border-bottom: 1px solid themed('color-border');
-                }
-            }
-        }
-    }
-
-    &__field-row > &__field:nth-child(1),
-    &__field-row > &__field:nth-child(2) {
-        @include small-height-app() {
-            @include themify() {
-                border-right: 1px solid themed('color-border');
-            }
-        }
-    }
-
-    &__field {
-        flex: 0 0 calc(33.333% - 1rem);
-        margin: .5rem;
-        overflow: hidden;
-        border-width: 1px;
-        border-style: solid;
-        border-radius: $radius;
-        @include themify() {
-            border-color: themed('color-border');
-            background-color: themed('color-base');
-        }
-
-        @include small-height-app() {
-            margin: 0;
-            border-radius: 0;
-            border: none;
-        }
-    }
+  }
 }

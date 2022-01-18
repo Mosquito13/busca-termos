@@ -22,17 +22,20 @@ const About = () => {
   return (
     <div className="about">
       <div className="about__title">
-        <Heading1>Busca Termos</Heading1>
+        <Heading1 value="Busca Termos" />
+        <div className="about__title-date">
+          <Paragraph value={`2021 - ${new Date().getFullYear()}`} />
+        </div>
       </div>
       <div className="about__info">
         <div className="about__info-item">
-          <Paragraph bold>Versão:</Paragraph>
-          <Paragraph>BOTAR A VERSAO</Paragraph>
+          <Paragraph value="Versão" bold />
+          <Paragraph value="BOTAR_A_VERSAO" />
         </div>
         <div className="about__info-item">
-          <Paragraph bold>Desenvolvido por:</Paragraph>
-          <Paragraph>Giovane de Oliveira</Paragraph>
-          <Paragraph>giovane.oliveira@softexpert.com</Paragraph>
+          <Paragraph value="Desenvolvido por:" bold />
+          <Paragraph value="Giovane de Oliveira" />
+          <Paragraph value="giovane.oliveira@softexpert.com" />
         </div>
       </div>
       <div className="about__button">

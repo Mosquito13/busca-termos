@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { FiInfo, FiSettings } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import useKeyboardShortcut from 'use-keyboard-shortcut';
 import debounce from 'lodash/debounce';
 
@@ -30,7 +30,9 @@ const Main = () => {
 
   const focusSearchField = useCallback(() => searchFieldRef.current.focus(), []);
 
-  useKeyboardShortcut(['Control', 'F'], focusSearchField, { ignoreInputFields: false });
+  useKeyboardShortcut(['Control', 'F'], focusSearchField, {
+    ignoreInputFields: false
+  });
 
   useEffect(() => dispatch(settingsActions.loadSettings()), [dispatch]);
 
@@ -62,7 +64,7 @@ const Main = () => {
       <div className="main">
         <div className="main__header">
           <div className="main__header-title">
-            <Heading1>{'Busca Termos'}</Heading1>
+            <Heading1 value="Busca Termos" />
           </div>
           <div className="main__header-search">
             <InputText
@@ -77,13 +79,21 @@ const Main = () => {
             <Button
               borderless
               tooltip="Preferências"
-              icon={<Icon><FiSettings /></Icon>}
+              icon={
+                <Icon>
+                  <FiSettings />
+                </Icon>
+              }
               onClick={onClickSettings}
             />
             <Button
               borderless
               tooltip="Sobre"
-              icon={<Icon><FiInfo /></Icon>}
+              icon={
+                <Icon>
+                  <FiInfo />
+                </Icon>
+              }
               onClick={onClickAbout}
             />
           </div>
@@ -95,7 +105,7 @@ const Main = () => {
           <TranslationsPanel />
         </div>
       </div>
-      <Loading loading={isLoading} />
+      <Loading show={isLoading} />
     </>
   );
 };

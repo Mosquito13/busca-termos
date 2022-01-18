@@ -1,122 +1,122 @@
 @import '../../../sass/styles.scss';
 
 .table {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-radius: $radius;
-    overflow: hidden;
-    user-select: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: $radius;
+  overflow: hidden;
+  user-select: none;
+  @include themify() {
+    border: 1px solid themed('color-border');
+  }
+
+  &__header {
+    flex: 0;
     @include themify() {
-        border: 1px solid themed('color-border');
+      border-bottom: 1px solid themed('color-border');
+    }
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__row {
+    display: flex;
+    height: 3rem;
+
+    &--header,
+    &--header:hover {
+      @include themify() {
+        background-color: themed('color-base-darker');
+      }
+      color: currentColor;
+    }
+  }
+
+  &__cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 1rem;
+    position: relative;
+    @include themify() {
+      box-shadow: inset 0 0 5px 3px themed('color-base');
     }
 
-    &__header {
-        flex: 0;
-        @include themify() {
-            border-bottom: 1px solid themed('color-border');
-        }
+    &:hover {
+      @include themify() {
+        background-color: themed('color-table-hover');
+        color: themed('color-base');
+      }
     }
 
-    &__body {
-        flex: 1;
+    &--odd {
+      @include themify() {
+        background-color: themed('color-base-lighter');
+        box-shadow: inset 0 0 5px 3px themed('color-base-lighter');
+      }
     }
 
-    &__row {
-        display: flex;
-        height: 3rem;
-
-        &--header,
-        &--header:hover {
-            @include themify() {
-                background-color: themed('color-base-darker');
-            }
-            color: currentColor;
-        }
+    &--small {
+      flex: 0 0 8rem;
     }
 
-    &__cell {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        padding-left: 1rem;
-        position: relative;
-        @include themify() {
-            box-shadow: inset 0 0 5px 3px themed('color-base');
-        }
-
-        &:hover {
-            @include themify() {
-                background-color: themed('color-table-hover');
-                color: themed('color-base');
-            }
-        }
-
-        &--odd {
-            @include themify() {
-                background-color: themed('color-base-lighter');
-                box-shadow: inset 0 0 5px 3px themed('color-base-lighter');
-            }
-        }
-
-        &--small {
-            flex: 0 0 8rem;
-        }
-
-        &--header,
-        &--header:hover {
-            @include themify() {
-                background-color: transparent;
-                box-shadow: none;
-                color: themed('color-text');
-            }
-        }
-
-        &--selected {
-            @include themify() {
-                background-color: themed('color-contrast');
-                color: themed('color-base');
-            }
-        }
+    &--header,
+    &--header:hover {
+      @include themify() {
+        background-color: transparent;
+        box-shadow: none;
+        color: themed('color-text');
+      }
     }
 
-    &__cell-text {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        cursor: default;
+    &--selected {
+      @include themify() {
+        background-color: themed('color-contrast');
+        color: themed('color-base');
+      }
     }
+  }
 
-    &__empty-state {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+  &__cell-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: default;
+  }
+
+  &__empty-state {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__empty-state-image-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    max-height: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s;
+
+    &--open {
+      opacity: 1;
     }
+  }
 
-    &__empty-state-image-wrapper {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        max-height: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        transition: opacity 1s;
+  &__empty-state-image {
+    height: 25rem;
+    filter: opacity(0.3);
 
-        &--open {
-            opacity: 1;
-        }
+    svg {
+      width: 100%;
+      height: 100%;
     }
-
-    &__empty-state-image {
-        height: 25rem;
-        filter: opacity(.3);
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
-    }
+  }
 }

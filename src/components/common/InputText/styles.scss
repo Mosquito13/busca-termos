@@ -1,53 +1,53 @@
 @import '../../../sass/styles.scss';
 
 .input-text {
+  flex: 1;
+  display: flex;
+  height: 4rem;
+
+  &__input {
     flex: 1;
-    display: flex;
     height: 4rem;
+    min-width: 4rem;
+    border: 1px solid currentColor;
+    outline: none;
+    padding: 0 1rem;
+    background-color: transparent;
+    color: currentColor;
+    font-family: inherit;
+    font-size: inherit;
+    transition: all 0.2s;
+    border-radius: $radius;
+    cursor: text;
 
-    &__input {
-        flex: 1;
-        height: 4rem;
-        min-width: 4rem;
-        border: 1px solid currentColor;
-        outline: none;
-        padding: 0 1rem;
-        background-color: transparent;
-        color: currentColor;
-        font-family: inherit;
-        font-size: inherit;
-        transition: all .2s;
-        border-radius: $radius;
-        cursor: text;
-
-        &::placeholder {
-            @include themify() {
-                color: themed('color-text-disabled');
-            }
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            box-shadow: 0px 0px 5px currentColor;
-        }
-
-        &--disabled {
-            box-shadow: none;
-            @include themify() {
-                border-color: themed('color-text-disabled');
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: none;
-            }
-        }
-
-        &--borderless {
-            border: none;
-            border-radius: 0;
-        }
+    &::placeholder {
+      @include themify() {
+        color: themed('color-text-disabled');
+      }
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0px 0px 5px currentColor;
+    }
+
+    &--disabled {
+      box-shadow: none;
+      @include themify() {
+        border-color: themed('color-text-disabled');
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+      }
+    }
+
+    &--borderless {
+      border: none;
+      border-radius: 0;
+    }
+  }
 }

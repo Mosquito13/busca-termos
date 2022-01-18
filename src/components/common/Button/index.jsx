@@ -31,10 +31,13 @@ const Button = ({ text, icon, tooltip, onClick, loading, disabled, borderless })
   }, [loading, onClick]);
 
   return (
-    <button className={classes} title={tooltip} onClick={handleClick} disabled={disabled}>
-      <div className="button__content">
-        {getContent(text, icon, loading)}
-      </div>
+    <button
+      className={classes}
+      title={tooltip}
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      <div className="button__content">{getContent(text, icon, loading)}</div>
     </button>
   );
 };
@@ -48,6 +51,10 @@ Button.propTypes = {
    * Icone exibido dentro do botao
    */
   icon: PropTypes.node,
+  /**
+   * Hint do botao
+   */
+  tooltip: PropTypes.string,
   /**
    * Acao ao clicar
    */

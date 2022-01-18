@@ -69,7 +69,7 @@ const settingsActions = {
   },
 
   validateAndSaveFirstSettings(languageFolder) {
-    return async dispatch => {
+    return async (dispatch) => {
       dispatch(this.setValidating(true));
 
       const isValid = await apiUtils.validateLanguageFolder(languageFolder);
@@ -88,7 +88,7 @@ const settingsActions = {
   },
 
   loadSettings() {
-    return async dispatch => {
+    return async (dispatch) => {
       const settings = storageUtils.getSettings();
       const isValid = await apiUtils.validateLanguageFolder(settings?.languageFolder);
 

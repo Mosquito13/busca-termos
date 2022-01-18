@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const Paragraph = ({ bold, smallFont, children }) => {
+const Paragraph = ({ value, bold, smallFont }) => {
   const classes = classNames(
     'paragraph',
     bold && 'paragraph--bold',
     smallFont && 'paragraph--small'
   );
 
-  return <p className={classes}>{children}</p>;
+  return <p className={classes}>{value}</p>;
 };
 
 Paragraph.propTypes = {
+  /**
+   * Texto do paragrafo
+   */
+  value: PropTypes.string,
   /**
    * Indica se e negrito
    */

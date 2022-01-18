@@ -25,7 +25,11 @@ Fieldset.propTypes = {
   /**
    * Conteudo
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /**
+   * Indica se nao vai ter margem superior
+   */
+  noMarginTop: PropTypes.bool
 };
 
 export default Fieldset;

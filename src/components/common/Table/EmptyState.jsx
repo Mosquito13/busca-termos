@@ -12,7 +12,7 @@ const EmptyState = () => {
 
     return () => {
       clearTimeout(imageTimeout);
-      setShowImage(false)
+      setShowImage(false);
     };
   }, []);
 
@@ -24,7 +24,7 @@ const EmptyState = () => {
   return (
     <div className="table__empty-state">
       <div className="table__empty-state-message">
-        <Heading4>{'Nenhum resultado encontrado.'}</Heading4>
+        <Heading4 value="Nenhum resultado encontrado." />
       </div>
       <div className={imageWrapperClasses}>
         <div className="table__empty-state-image">

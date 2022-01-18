@@ -24,19 +24,8 @@ const buildCells = (header, columns, data, onSelect, selectedCell, idField, odd)
     );
   });
 
-const TableRow = ({
-  header,
-  columns,
-  data,
-  odd,
-  selectedCell,
-  onSelect,
-  idField
-}) => {
-  const classes = classNames(
-    'table__row',
-    header && 'table__row--header'
-  );
+const TableRow = ({ header, columns, data, odd, selectedCell, onSelect, idField }) => {
+  const classes = classNames('table__row', header && 'table__row--header');
 
   return (
     <div className={classes}>
@@ -63,11 +52,32 @@ TableRow.propTypes = {
    */
   columns: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Titulo da coluna
+       */
       title: PropTypes.string,
+      /**
+       * Nome da chave dos dados
+       */
       dataKey: PropTypes.string,
+      /**
+       * Tamanho da coluna
+       */
       size: PropTypes.oneOf([SMALL, AUTO])
     })
-  )
+  ),
+  /**
+   * Identificador da celula selecionada
+   */
+  selectedCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Funcao executada ao selecionar uma celula
+   */
+  onSelect: PropTypes.func,
+  /**
+   * Nome da chave dos dados onde deve-se buscar o identificador da linha
+   */
+  idField: PropTypes.string
 };
 
 export default TableRow;

@@ -13,21 +13,19 @@ import './sass/styles.scss';
 
 const store = configureStore();
 
-function App() {
-  return (
-    <Provider store={store}>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<BaseLayout />}>
-            <Route index element={<Main />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/configNotFound" element={<ConfigNotFound />} />
-            <Route path="/about" element={<About />} />
-          </Route>
-        </Routes>
-      </HashRouter>
-    </Provider>
-  );
-}
+const App = () => (
+  <Provider store={store}>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<BaseLayout />}>
+          <Route index element={<Main />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/configNotFound" element={<ConfigNotFound />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  </Provider>
+);
 
 export default App;

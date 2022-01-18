@@ -1,65 +1,65 @@
 @import '../../../sass/styles.scss';
 
 .toggle {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    width: 4.5rem;
+    height: 2.5rem;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    padding: 1px;
     display: flex;
-    align-items: center;
+    transition: background-color 0.2s;
+    background-color: transparent;
+    cursor: pointer;
 
-    &__input {
-        width: 4.5rem;
-        height: 2.5rem;
-        border: 1px solid currentColor;
-        border-radius: 50px;
-        padding: 1px;
-        display: flex;
-        transition: background-color .2s;
-        background-color: transparent;
-        cursor: pointer;
-
-        &--checked {
-            @include themify() {
-                background-color: themed('color-contrast');
-            }
-        }
-
-        &--disabled {
-            filter: brightness(.6);
-            cursor: not-allowed;
-        }
+    &--checked {
+      @include themify() {
+        background-color: themed('color-contrast');
+      }
     }
 
-    &__circle {
-        width: 2.1rem;
-        height: 100%;
-        background-color: currentColor;
-        border-radius: 50%;
-        transform: none;
-        animation: uncheckToggle .2s linear 0s forwards;
+    &--disabled {
+      filter: brightness(0.6);
+      cursor: not-allowed;
+    }
+  }
 
-        &--checked {
-            animation: checkToggle .2s linear 0s forwards;
-        }
+  &__circle {
+    width: 2.1rem;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: none;
+    animation: uncheckToggle 0.2s linear 0s forwards;
 
-        &--with-icon {
-            border: 1px solid currentColor;
-            transition: filter .2s;
-            filter: contrast(.3);
-            display: flex;
-            align-items: center;
-        }
-
-        &--with-icon#{&}--checked {
-            filter: none;
-        }
+    &--checked {
+      animation: checkToggle 0.2s linear 0s forwards;
     }
 
-    &__label {
-        margin-left: 1rem;
-        user-select: none;
-        cursor: pointer;
-
-        &--disabled {
-            cursor: not-allowed;
-            filter: brightness(.6);
-        }
+    &--with-icon {
+      border: 1px solid currentColor;
+      transition: filter 0.2s;
+      filter: contrast(0.3);
+      display: flex;
+      align-items: center;
     }
+
+    &--with-icon#{&}--checked {
+      filter: none;
+    }
+  }
+
+  &__label {
+    margin-left: 1rem;
+    user-select: none;
+    cursor: pointer;
+
+    &--disabled {
+      cursor: not-allowed;
+      filter: brightness(0.6);
+    }
+  }
 }

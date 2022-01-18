@@ -4,7 +4,9 @@ import { languageMapping } from '../mapping/languages';
 
 const translationInitial = {};
 
-Object.values(languageMapping).forEach(({ id }) => translationInitial[id] = true);
+Object.values(languageMapping).forEach(
+  ({ id }) => (translationInitial[id] = true)
+);
 
 const initial = {
   /* internal controls */

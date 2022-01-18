@@ -1,23 +1,29 @@
 .about {
-    margin-top: 4rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title-date {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  &__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin: 5rem 0;
+  }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 5rem 0;
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    & > *:first-child {
+      margin-bottom: 0.5rem;
     }
-
-    &__info-item {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3rem;
-
-        & > *:first-child {
-            margin-bottom: .5rem;
-        }
-    }
+  }
 }

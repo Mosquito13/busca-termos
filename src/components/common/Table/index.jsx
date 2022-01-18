@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { FixedSizeList } from 'react-window';
 import PropTypes from 'prop-types';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import { FixedSizeList } from 'react-window';
-import { useDispatch } from 'react-redux';
 
 import { SMALL, AUTO } from './TableCell';
 import EmptyState from './EmptyState';
@@ -12,7 +12,6 @@ import coreActions from '../../../actions/core';
 import settingsSelectors from '../../../selectors/settings';
 
 import './styles.scss';
-import { useSelector } from 'react-redux';
 
 const isOdd = (index) => index % 2 !== 0;
 
@@ -21,11 +20,14 @@ const Table = ({ data, columns, idField }) => {
   const [selectedCell, setSelectedCell] = useState(null);
   const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
-  const onSelect = useCallback((itemId, cellId, cellValue) => {
-    window.navigator.clipboard.writeText(cellValue);
-    setSelectedCell(cellId);
-    dispatch(coreActions.setSelectedItemId(itemId));
-  }, [dispatch]);
+  const onSelect = useCallback(
+    (itemId, cellId, cellValue) => {
+      window.navigator.clipboard.writeText(cellValue);
+      setSelectedCell(cellId);
+      dispatch(coreActions.setSelectedItemId(itemId));
+    },
+    [dispatch]
+  );
 
   return (
     <div className="table">
@@ -78,8 +80,17 @@ Table.propTypes = {
    */
   columns: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Titulo da coluna
+       */
       title: PropTypes.string,
+      /**
+       * Nome da chave do objeto onde deve buscar os dados
+       */
       dataKey: PropTypes.string,
+      /**
+       * Tamanho da coluna
+       */
       size: PropTypes.oneOf([SMALL, AUTO])
     })
   )

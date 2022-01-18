@@ -1,5 +1,4 @@
 import actionTypes from '../constants/actionTypes';
-
 import coreSelectors from '../selectors/core';
 
 const translationActions = {
@@ -15,7 +14,7 @@ const translationActions = {
     return (dispatch, getState) => {
       const state = getState();
       const data = coreSelectors.getData(state);
-      const translation = data[id].find(d => d.id === termId);
+      const translation = data[id].find((d) => d.id === termId);
 
       dispatch(this.setTranslation(id, translation?.content));
     };

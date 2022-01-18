@@ -28,7 +28,31 @@ TableCell.propTypes = {
   /**
    * Tamanho da celula
    */
-  size: PropTypes.oneOf([SMALL, AUTO])
+  size: PropTypes.oneOf([SMALL, AUTO]),
+  /**
+   * Indica se faz parte do cabecalho da tabela
+   */
+  header: PropTypes.bool,
+  /**
+   * Funcao executada ao selecionar uma celula
+   */
+  onSelect: PropTypes.func,
+  /**
+   * Indica se esta celula selecionada
+   */
+  selected: PropTypes.bool,
+  /**
+   * Identificador unico da celula
+   */
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Identificador unico do registro (linha)
+   */
+  itemId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Indica se e linha impar (para usar a zebra)
+   */
+  odd: PropTypes.bool
 };
 
 export { SMALL, AUTO };

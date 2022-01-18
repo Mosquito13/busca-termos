@@ -1,88 +1,88 @@
 @import '../../../sass/styles.scss';
 
 .button {
-    background-color: transparent;
-    border-radius: $radius;
-    font-size: inherit;
-    font-family: inherit;
-    white-space: nowrap;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    outline: none;
-    transition: all .2s;
-    height: 4rem;
+  background-color: transparent;
+  border-radius: $radius;
+  font-size: inherit;
+  font-family: inherit;
+  white-space: nowrap;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  height: 4rem;
+
+  @include themify() {
+    border: 1px solid themed('color-text');
+    color: themed('color-text');
+  }
+
+  &:focus {
+    @include themify() {
+      box-shadow: 0px 0px 5px themed('color-text');
+    }
+  }
+
+  &:hover {
+    @include themify() {
+      color: themed('color-base');
+      background-color: themed('color-text');
+      box-shadow: 0px 0px 5px themed('color-text');
+    }
+  }
+
+  &:active {
+    @include themify() {
+      color: themed('color-base');
+      background-color: themed('color-text');
+      box-shadow: 0px 0px 3px themed('color-text');
+    }
+    transform: translateY(1px);
+  }
+
+  &--borderless {
+    border-color: transparent !important;
+    box-shadow: none;
+  }
+
+  &--with-icon,
+  &--loading {
+    padding: 0.5rem 1rem;
+    line-height: 1rem;
+  }
+
+  &--disabled {
+    box-shadow: none;
+    cursor: not-allowed;
 
     @include themify() {
-        border: 1px solid themed('color-text');
-        color: themed('color-text');
+      color: themed('color-text-disabled');
+      border-color: themed('color-text-disabled');
     }
 
-    &:focus {
-        @include themify() {
-            box-shadow: 0px 0px 5px themed('color-text');
-        }
-    }
-
-    &:hover {
-        @include themify() {
-            color: themed('color-base');
-            background-color: themed('color-text');
-            box-shadow: 0px 0px 5px themed('color-text');
-        }
-    }
-
+    &:hover,
     &:active {
-        @include themify() {
-            color: themed('color-base');
-            background-color: themed('color-text');
-            box-shadow: 0px 0px 3px themed('color-text');
-        }
-        transform: translateY(1px);
-    }
-
-    &--borderless {
-        border-color: transparent !important;
+      @include themify() {
+        color: themed('color-text-disabled');
+        background-color: transparent;
         box-shadow: none;
+        transform: none;
+      }
     }
+  }
 
-    &--with-icon,
-    &--loading {
-        padding: .5rem 1rem;
-        line-height: 1rem;
-    }
+  &__content {
+    transition: transform 0.2s;
+  }
 
-    &--disabled {
-        box-shadow: none;
-        cursor: not-allowed;
+  &:active > &__content {
+    transform: translateY(1px);
+  }
 
-        @include themify() {
-            color: themed('color-text-disabled');
-            border-color: themed('color-text-disabled');
-        }
-
-        &:hover,
-        &:active {
-            @include themify() {
-                color: themed('color-text-disabled');
-                background-color: transparent;
-                box-shadow: none;
-                transform: none;
-            }
-        }
-    }
-
-    &__content {
-        transition: transform .2s;
-    }
-
-    &:active > &__content {
-        transform: translateY(1px);
-    }
-
-    &--disabled:active > &__content {
-        transform: none !important;
-    }
+  &--disabled:active > &__content {
+    transform: none !important;
+  }
 }

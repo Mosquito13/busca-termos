@@ -7,7 +7,7 @@
   flex-direction: column;
   overflow: hidden;
   border: 1px solid $color-window-border;
-  transition: all .2s;
+  transition: all 0.2s;
 
   @include themify(true) {
     background-color: themed('color-base');

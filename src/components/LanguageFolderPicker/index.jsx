@@ -3,9 +3,9 @@ import { FiXOctagon, FiMoreHorizontal } from 'react-icons/fi';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import Icon, { EXTRA_SMALL } from '../common/Icon';
 import InputText from '../common/InputText';
 import Button from '../common/Button';
-import Icon, { EXTRA_SMALL } from '../common/Icon';
 
 import './styles.scss';
 
@@ -75,8 +75,8 @@ const LanguageFolderPicker = ({ value, error, onChange, disabled }) => {
         </div>
         <input
           className="language-folder-picker__input-file"
-          ref={inputFileRef}
           onChange={onChangeFolder}
+          ref={inputFileRef}
           type="file"
           id="filepicker"
           name="fileList"
@@ -84,9 +84,7 @@ const LanguageFolderPicker = ({ value, error, onChange, disabled }) => {
           directory=""
         />
       </div>
-      <div className={errorClasses}>
-        {getErrorMessage(error)}
-      </div>
+      <div className={errorClasses}>{getErrorMessage(error)}</div>
     </div>
   );
 };

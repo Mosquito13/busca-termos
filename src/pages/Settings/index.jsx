@@ -4,42 +4,40 @@ import { useNavigate } from 'react-router-dom';
 import orderBy from 'lodash/orderBy';
 
 import Icon, { SMALL, RESPONSIVE } from '../../components/common/Icon';
+import { languageMapping } from '../../mapping/languages';
+import Fieldset from '../../components/common/Fieldset';
 import Button from '../../components/common/Button';
 import Toggle from '../../components/common/Toggle';
 import Select from '../../components/common/Select';
-import Fieldset from '../../components/common/Fieldset';
-import { languageMapping } from '../../mapping/languages';
 
 import coreActions from '../../actions/core';
 import settingsActions from '../../actions/settings';
-import settingsSelectors from '../../selectors/settings'
+import settingsSelectors from '../../selectors/settings';
 
 import './styles.scss';
 
 const getLanguageItems = (mainLanguage, translation, onChangeTranslation) => {
-  const languageToggles = [];
-  const languageOptions = [];
+  const languageToggles = [], languageOptions = [];
 
-  orderBy(languageMapping, ['title'])
-    .forEach(({ id, title, getIcon }) => {
-      languageToggles.push((
-        <div key={id} className="settings__field">
-          <Toggle
-            label={title}
-            icon={<Icon size={RESPONSIVE}>{getIcon()}</Icon>}
-            value={translation[id] && mainLanguage !== id}
-            onChange={() => onChangeTranslation(id, !translation[id])}
-            disabled={mainLanguage === id}
-          />
-        </div>
-      ));
+  orderBy(languageMapping, ['title']).forEach(({ id, title, getIcon }) => {
+    languageToggles.push(
+      <div key={id} className="settings__field">
+        <Toggle
+          label={title}
+          icon={<Icon size={RESPONSIVE}>{getIcon()}</Icon>}
+          value={translation[id] && mainLanguage !== id}
+          onChange={() => onChangeTranslation(id, !translation[id])}
+          disabled={mainLanguage === id}
+        />
+      </div>
+    );
 
-      languageOptions.push({
-        icon: <Icon size={SMALL}>{getIcon()}</Icon>,
-        text: title,
-        value: id
-      });
+    languageOptions.push({
+      icon: <Icon size={SMALL}>{getIcon()}</Icon>,
+      text: title,
+      value: id
     });
+  });
 
   return [languageToggles, languageOptions];
 };
@@ -75,7 +73,11 @@ const Settings = () => {
     dispatch(settingsActions.toggleTranslation(id, value));
   }, [dispatch]);
 
-  const [languageToggles, languageOptions] = getLanguageItems(mainLanguage, translation, onChangeTranslation);
+  const [languageToggles, languageOptions] = getLanguageItems(
+    mainLanguage,
+    translation,
+    onChangeTranslation
+  );
 
   return (
     <div className="settings">
@@ -113,10 +115,7 @@ const Settings = () => {
         </Fieldset>
       </div>
       <div className="settings__footer">
-        <Button
-          text="Aplicar"
-          onClick={onClickApply}
-        />
+        <Button text="Aplicar" onClick={onClickApply} />
       </div>
     </div>
   );

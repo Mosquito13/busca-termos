@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import classNames from 'classnames';
@@ -6,7 +7,6 @@ import AppFrame from '../../components/AppFrame';
 import settingsSelectors from '../../selectors/settings';
 
 import './styles.scss';
-import { useEffect } from 'react';
 
 const BaseLayout = () => {
   const darkTheme = useSelector(settingsSelectors.isDarkTheme);

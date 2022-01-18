@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { useCallback, useEffect, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import SelectOption from './SelectOption';
 import Icon from '../Icon';
@@ -11,16 +11,15 @@ import './styles.scss';
 const Select = ({ options, value, onChange, useRoundIconBorder }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const toggleDropdown = useCallback(
+    () => setShowDropdown(!showDropdown),
+    [setShowDropdown, showDropdown]
+  );
   const closeDropdown = useCallback(() => {
     if (showDropdown) {
       setShowDropdown(false);
     }
   }, [setShowDropdown, showDropdown]);
-
-  const toggleDropdown = useCallback(
-    () => setShowDropdown(!showDropdown),
-    [setShowDropdown, showDropdown]
-  );
 
   useEffect(() => {
     document.body.addEventListener('click', closeDropdown);
@@ -28,7 +27,7 @@ const Select = ({ options, value, onChange, useRoundIconBorder }) => {
     return () => document.body.removeEventListener('click', closeDropdown);
   }, [closeDropdown]);
 
-  const selectedValue = options?.find(o => o.value === value);
+  const selectedValue = options?.find((o) => o.value === value);
 
   const classesFieldContainer = classNames(
     'select__field-container',

@@ -28,12 +28,9 @@ const ConfigNotFound = () => {
     }
   }, [isValid, navigate]);
 
-  const handleChangeLanguageFolder = useCallback(
-    (value) => {
-      dispatch(settingsActions.setLanguageFolder(value));
-    },
-    [dispatch]
-  );
+  const handleChangeLanguageFolder = useCallback((value) => {
+    dispatch(settingsActions.setLanguageFolder(value));
+  }, [dispatch]);
 
   const onClickValidate = useCallback(() => {
     dispatch(settingsActions.validateAndSaveFirstSettings(languageFolder));
@@ -46,21 +43,13 @@ const ConfigNotFound = () => {
       </Icon>
       <div className="config-not-found__message">
         <div className="config-not-found__message-title">
-          <Heading3>{'Configuração não encontrada.'}</Heading3>
+          <Heading3 value="Configuração não encontrada." />
         </div>
         <div className="config-not-found__message-help">
-          <Paragraph>
-            {
-              'Insira ou selecione o caminho até a pasta language do seu repositório.'
-            }
-          </Paragraph>
+          <Paragraph value="Insira ou selecione o caminho até a pasta language do seu repositório." />
         </div>
         <div className="config-not-found__message-help-example">
-          <Paragraph smallFont>
-            {
-              'A pasta language fica em {{seu_repositorio}}/System/web/include/language'
-            }
-          </Paragraph>
+          <Paragraph value ="A pasta language fica em {{seu_repositorio}}/System/web/include/language" smallFont />
         </div>
       </div>
       <div className="config-not-found__folder-picker">

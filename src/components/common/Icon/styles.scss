@@ -1,29 +1,29 @@
 .icon {
-    height: 100%;
+  height: 100%;
+  width: 100%;
+
+  &--extra-small {
+    font-size: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &--small {
+    font-size: 2rem;
+    height: 2rem;
+  }
+
+  &--medium {
+    font-size: 3rem;
+    height: 3rem;
+  }
+
+  &--large {
+    font-size: 6rem;
+    height: 6rem;
+  }
+
+  svg {
     width: 100%;
-
-    &--extra-small {
-        font-size: 1.5rem;
-        height: 1.5rem;
-    }
-
-    &--small {
-        font-size: 2rem;
-        height: 2rem;
-    }
-
-    &--medium {
-        font-size: 3rem;
-        height: 3rem;
-    }
-
-    &--large {
-        font-size: 6rem;
-        height: 6rem;
-    }
-
-    svg {
-        width: 100%;
-        height: 100%;
-    }
+    height: 100%;
+  }
 }

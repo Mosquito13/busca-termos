@@ -1,69 +1,69 @@
 @import '../../sass/styles.scss';
 
 .app-frame {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba($color-black, 0.8);
+  user-select: none;
+  cursor: default;
+  transition: all 0.2s;
+  -webkit-app-region: drag;
+
+  @include themify() {
+    background-color: themed('color-app-bar');
+    color: themed('color-app-bar-text');
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__title-icon {
+    margin-left: 10px;
+    max-height: 25px;
+    max-width: 25px;
+    -webkit-app-region: no-drag;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
     height: 100%;
+  }
+
+  &__button {
+    height: 100%;
+    border: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0 5px rgba($color-black, .8);
-    user-select: none;
-    cursor: default;
-    transition: all .2s;
-    -webkit-app-region: drag;
+    padding: 0 12px;
+    background-color: transparent;
+    color: currentColor;
+    transition: background-color 0.2s;
+    -webkit-app-region: no-drag;
 
-    @include themify() {
-        background-color: themed('color-app-bar');
-        color: themed('color-app-bar-text');
+    &:hover {
+      @include themify() {
+        background-color: themed('color-app-bar-hover');
+      }
     }
 
-    &__title {
-        display: flex;
+    &--close:hover {
+      @include themify() {
+        background-color: themed('color-app-bar-close');
+      }
     }
+  }
 
-    &__title-icon {
-        margin-left: 10px;
-        max-height: 25px;
-        max-width: 25px;
-        -webkit-app-region: no-drag;
-
-        svg {
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-    &__buttons {
-        display: flex;
-        height: 100%;
-    }
-
-    &__button {
-        height: 100%;
-        border: none;
-        display: flex;
-        align-items: center;
-        padding: 0 13px;
-        background-color: transparent;
-        color: currentColor;
-        transition: background-color .2s;
-        -webkit-app-region: no-drag;
-
-        &:hover {
-            @include themify() {
-                background-color: themed('color-app-bar-hover');
-            }
-        }
-
-        &--close:hover {
-            @include themify() {
-                background-color: themed('color-app-bar-close');
-            }
-        }
-    }
-
-    &__button-icon {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-    }
+  &__button-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
 }

@@ -4,20 +4,20 @@
 
 ::-webkit-scrollbar-track {
   @include themify() {
-    background-color: themed('color-border');
+    background-color: themed('color-base-darker');
   }
 }
 
 ::-webkit-scrollbar-thumb {
   @include themify() {
-    background-color: themed('color-base');
-    border: 2px solid themed('color-border');
+    background-color: themed('color-border');
+    border: 2px solid themed('color-base-darker');
   }
   border-radius: $radius;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   @include themify() {
-    background-color: themed('color-text');
+    background-color: themed('color-contrast');
   }
 }

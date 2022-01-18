@@ -18,14 +18,13 @@ const Icon = ({ size, children }) => {
     size === LARGE && 'icon--large'
   );
 
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 };
 
 Icon.propTypes = {
+  /**
+   * Tamanho do botao
+   */
   size: PropTypes.oneOf([null, EXTRA_SMALL, SMALL, MEDIUM, LARGE, RESPONSIVE])
 };
 

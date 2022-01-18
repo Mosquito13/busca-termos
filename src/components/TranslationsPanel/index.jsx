@@ -3,9 +3,8 @@ import orderBy from 'lodash/orderBy';
 import chunk from 'lodash/chunk';
 
 import { languageMapping } from '../../mapping/languages';
-import TranslationField from '../TranslationField';
-
 import settingsSelectors from '../../selectors/settings';
+import TranslationField from '../TranslationField';
 
 import './styles.scss';
 
@@ -19,11 +18,7 @@ const TranslationsPanel = () => {
     if (id !== mainLanguage && translation[id]) {
       fields.push(
         <div key={id} className="translations-panel__field">
-          <TranslationField
-            id={id}
-            title={title}
-            FlagIcon={getIcon()}
-          />
+          <TranslationField id={id} tooltip={title} icon={getIcon()} />
         </div>
       );
     }
@@ -33,17 +28,13 @@ const TranslationsPanel = () => {
 
   return (
     <div className="translations-panel">
-      <div className="translations-panel__header">
-        {'Traduções'}
-      </div>
+      <div className="translations-panel__header">{'Traduções'}</div>
       <div className="translations-panel__fields">
-        {fieldsChunks.map((fieldsChunk, idx) => {
-          return (
-            <div key={idx} className="translations-panel__field-row">
-              {fieldsChunk.map(field => field)}
-            </div>
-          );
-        })}
+        {fieldsChunks.map((fieldsChunk, idx) => (
+          <div key={idx} className="translations-panel__field-row">
+            {fieldsChunk.map((field) => field)}
+          </div>
+        ))}
       </div>
     </div>
   );

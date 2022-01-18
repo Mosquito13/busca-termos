@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   VscChromeMinimize,
@@ -14,7 +14,6 @@ import frameActions from '../../actions/frame';
 import frameSelectors from '../../selectors/frame';
 
 import './styles.scss';
-import { useEffect } from 'react';
 
 const AppFrame = () => {
   const dispatch = useDispatch();
@@ -29,29 +28,22 @@ const AppFrame = () => {
     return dispatch(frameActions.maximize());
   }, [dispatch, isMaximized]);
 
-  useEffect(() => {
-    dispatch(frameActions.registerFrameListeners());
-  }, [dispatch]);
+  useEffect(() => dispatch(frameActions.registerFrameListeners()), [dispatch]);
 
   return (
     <div className="app-frame">
       <div className="app-frame__title">
-        <div className="app-frame__title-icon" onDoubleClick={onClose}><AppIcon /></div>
+        <div className="app-frame__title-icon" onDoubleClick={onClose}>
+          <AppIcon />
+        </div>
       </div>
       <div className="app-frame__buttons">
-        <FrameButton
-          icon={<VscChromeMinimize />}
-          onClick={onMinimize}
-        />
+        <FrameButton icon={<VscChromeMinimize />} onClick={onMinimize} />
         <FrameButton
           icon={isMaximized ? <VscChromeRestore /> : <VscChromeMaximize />}
           onClick={onMaximize}
         />
-        <FrameButton
-          close
-          icon={<VscChromeClose />}
-          onClick={onClose}
-        />
+        <FrameButton close icon={<VscChromeClose />} onClick={onClose} />
       </div>
     </div>
   );

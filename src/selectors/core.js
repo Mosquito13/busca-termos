@@ -1,4 +1,4 @@
-const getSlice = state => state.Core;
+const getSlice = (state) => state.Core;
 
 const coreSelectors = {
   isLoading(state) {

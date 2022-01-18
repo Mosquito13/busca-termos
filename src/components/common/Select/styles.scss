@@ -1,100 +1,100 @@
 @import '../../../sass/styles.scss';
 
 .select {
-    position: relative;
-    user-select: none;
+  position: relative;
+  user-select: none;
 
-    &__field-container {
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        border: 1px solid currentColor;
-        border-radius: $radius;
-        cursor: pointer;
-        transition: box-shadow .2s;
+  &__field-container {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
 
-        &--active,
-        &:hover {
-            box-shadow: 0px 0px 5px currentColor;
-        }
+    &--active,
+    &:hover {
+      box-shadow: 0px 0px 5px currentColor;
+    }
+  }
+
+  &__field {
+    flex: 1;
+  }
+
+  &__field-icon {
+    flex: 0 0 4rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid currentColor;
+    border-radius: $radius;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    z-index: 50;
+    overflow: hidden;
+    @include themify() {
+      background-color: themed('color-base');
     }
 
-    &__field {
-        flex: 1;
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0px 0px 5px currentColor;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      @include themify() {
+        border-bottom: 1px solid themed('color-text-disabled');
+      }
     }
 
-    &__field-icon {
-        flex: 0 0 4rem;
+    &:hover {
+      @include themify() {
+        background-color: themed('color-text');
+        color: themed('color-base');
+      }
     }
 
-    &__dropdown {
-        position: absolute;
-        top: 4.5rem;
-        left: 0;
-        width: 100%;
-        min-height: 3rem;
-        border: 1px solid currentColor;
-        border-radius: $radius;
-        opacity: 0;
-        visibility: hidden;
-        transition: all .2s;
-        z-index: 50;
-        overflow: hidden;
-        @include themify() {
-            background-color: themed('color-base');
-        }
-
-        &--active {
-            opacity: 1;
-            visibility: visible;
-            box-shadow: 0px 0px 5px currentColor;
-        }
+    &--selected {
+      @include themify() {
+        background-color: themed('color-contrast');
+        color: themed('color-base');
+      }
     }
 
-    &__option {
-        display: flex;
-        align-items: center;
-        height: 3rem;
-        cursor: pointer;
-        transition: all .2s;
-
-        &:not(:last-child) {
-            @include themify() {
-                border-bottom: 1px solid themed('color-text-disabled');
-            }
-        }
-
-        &:hover {
-            @include themify() {
-                background-color: themed('color-text');
-                color: themed('color-base');
-            }
-        }
-
-        &--selected {
-            @include themify() {
-                background-color: themed('color-contrast');
-                color: themed('color-base');
-            }
-        }
-
-        &--unselectable:hover {
-            background-color: transparent !important;
-            color: currentColor !important;
-        }
+    &--unselectable:hover {
+      background-color: transparent !important;
+      color: currentColor !important;
     }
+  }
 
-    &__option-icon {
-        margin-left: 1rem;
+  &__option-icon {
+    margin-left: 1rem;
 
-        &--rounded-border {
-            border: 1px solid currentColor;
-            border-radius: 50%;
-        }
+    &--rounded-border {
+      border: 1px solid currentColor;
+      border-radius: 50%;
     }
+  }
 
-    &__option-text {
-        flex: 1;
-        margin-left: 1rem;
-    }
+  &__option-text {
+    flex: 1;
+    margin-left: 1rem;
+  }
 }

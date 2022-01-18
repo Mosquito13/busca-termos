@@ -1,7 +1,7 @@
 import actionTypes from '../constants/actionTypes';
 
 const initial = {
-  loading:  true,
+  loading: true,
   data: null,
   filter: '',
   selectedItemId: null

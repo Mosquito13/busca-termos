@@ -1,15 +1,13 @@
-@import '../../../sass/styles.scss';
-
 .paragraph {
-    font-family: inherit;
-    font-size: inherit;
-    color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  color: currentColor;
 
-    &--bold {
-        font-weight: 600;
-    }
+  &--bold {
+    font-weight: 600;
+  }
 
-    &--small {
-        font-size: 1.2rem;
-    }
+  &--small {
+    font-size: 1.2rem;
+  }
 }

@@ -1,29 +1,29 @@
 @import '../../../sass/styles.scss';
 
 .loading {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s;
-    opacity: 1;
-    visibility: visible;
-    @include themify() {
-        background-color: themed('color-base');
-    }
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 1;
+  visibility: visible;
+  @include themify() {
+    background-color: themed('color-base');
+  }
 
-    &__icon {
-        transform: translate(-10rem, -5rem);
-    }
+  &__icon {
+    transform: translate(-10rem, -5rem);
+  }
 
-    &--loaded {
-        opacity: 0;
-        visibility: hidden;
-    }
+  &--loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

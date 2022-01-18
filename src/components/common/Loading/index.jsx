@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { PacmanLoader } from 'react-spinners';
 
 import './styles.scss';
 
-const Loading = ({ loading }) => {
+const Loading = ({ show }) => {
   const classes = classNames(
     'loading',
-    !loading && 'loading--loaded'
-  )
+    !show && 'loading--loaded'
+  );
 
   return (
     <div className={classes}>
@@ -16,6 +17,13 @@ const Loading = ({ loading }) => {
       </div>
     </div>
   );
+};
+
+Loading.propTypes = {
+  /**
+   * Indica se exibe o carregando
+   */
+  show: PropTypes.bool
 };
 
 export default Loading;
