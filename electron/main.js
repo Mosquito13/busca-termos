@@ -92,8 +92,12 @@ if (!gotTheLock) {
 }
 
 ipcMain.on('show-app', () => {
-  splashWindow.close();
-  appWindow.show();
+  if (splashWindow !== null) {
+    splashWindow.close();
+    splashWindow = null;
+
+    appWindow.show();
+  }
 });
 
 ipcMain.on('close', () => appWindow.close());
