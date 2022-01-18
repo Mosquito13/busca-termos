@@ -54,7 +54,7 @@ if (!gotTheLock) {
 
     if (isDev) {
       win.loadURL('http://localhost:3000');
-      // win.webContents.openDevTools({ mode: 'detach' });
+      win.webContents.openDevTools({ mode: 'detach' });
     } else {
       win.loadFile('./build/index.html');
     }
@@ -91,13 +91,9 @@ if (!gotTheLock) {
   });
 }
 
-ipcMain.on('show-app', () => {
-  if (splashWindow !== null) {
-    splashWindow.close();
-    splashWindow = null;
-
-    appWindow.show();
-  }
+ipcMain.once('show-app', () => {
+  splashWindow.close();
+  appWindow.show();
 });
 
 ipcMain.on('close', () => appWindow.close());
