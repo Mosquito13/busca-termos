@@ -1,9 +1,9 @@
 const { contextBridge } = require('electron');
 
-const languageApi = require('./api/language');
+const coreApi = require('./api/core');
 const frameApi = require('./api/frame');
 
 contextBridge.exposeInMainWorld('API', {
-  ...languageApi,
+  ...coreApi,
   ...frameApi
 });

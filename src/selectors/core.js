@@ -13,6 +13,18 @@ const coreSelectors = {
     return getSlice(state).filter;
   },
 
+  getAppVersion(state) {
+    return getSlice(state).version;
+  },
+
+  getAppHasUpdate(state) {
+    return getSlice(state).appHasUpdate;
+  },
+
+  getUpdateURL(state) {
+    return getSlice(state).updateURL;
+  },
+
   getSelectedItemId(state) {
     return getSlice(state).selectedItemId;
   }

@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState, useCallback, useMemo } from 'react';
+import { useRef, useEffect, useState, useCallback, useMemo, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { FiInfo, FiSettings } from 'react-icons/fi';
+import { FiInfo, FiSettings, FiRefreshCw } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import useKeyboardShortcut from 'use-keyboard-shortcut';
 import debounce from 'lodash/debounce';
@@ -26,6 +26,7 @@ const Main = () => {
   const dispatch = useDispatch();
   const isValid = useSelector(settingsSelectors.isValid);
   const isLoading = useSelector(coreSelectors.isLoading);
+  const appHasUpdate = useSelector(coreSelectors.getAppHasUpdate);
   const [searchValue, setSearchValue] = useState('');
 
   const focusSearchField = useCallback(() => searchFieldRef.current.focus(), []);
@@ -64,7 +65,7 @@ const Main = () => {
       <div className="main">
         <div className="main__header">
           <div className="main__header-title">
-            <Heading1 value="Busca Termos" />
+            <Heading1 value="BuscaTermos" />
           </div>
           <div className="main__header-search">
             <InputText
@@ -88,12 +89,15 @@ const Main = () => {
             />
             <Button
               borderless
-              tooltip="Sobre"
+              tooltip={`Sobre${
+                appHasUpdate ? ' (Existe uma atualização)' : ''
+              }`}
               icon={
                 <Icon>
                   <FiInfo />
                 </Icon>
               }
+              marker={appHasUpdate && <FiRefreshCw />}
               onClick={onClickAbout}
             />
           </div>
@@ -110,4 +114,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default memo(Main);

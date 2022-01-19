@@ -14,6 +14,7 @@
   outline: none;
   transition: all 0.2s;
   height: 4rem;
+  position: relative;
 
   @include themify() {
     border: 1px solid themed('color-text');
@@ -84,5 +85,20 @@
 
   &--disabled:active > &__content {
     transform: none !important;
+  }
+
+  &__marker {
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    border-radius: 50%;
+    padding: 2px;
+    width: 1.7rem;
+    height: 1.7rem;
+    @include themify() {
+      background-color: themed('color-danger');
+      border: 1px solid $color-white;
+      color: $color-white;
+    }
   }
 }

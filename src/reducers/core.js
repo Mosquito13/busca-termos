@@ -4,7 +4,10 @@ const initial = {
   loading: true,
   data: null,
   filter: '',
-  selectedItemId: null
+  selectedItemId: null,
+  version: '',
+  appHasUpdate: null,
+  updateURL: ''
 };
 
 const coreReducer = (state = initial, action) => {
@@ -17,6 +20,12 @@ const coreReducer = (state = initial, action) => {
 
     case actionTypes.SET_FILTER:
       return { ...state, filter: action.filter };
+
+    case actionTypes.SET_APP_VERSION:
+      return { ...state, version: action.version };
+
+    case actionTypes.SET_APP_HAS_UPDATE:
+      return { ...state, appHasUpdate: action.appHasUpdate, updateURL: action.updateURL };
 
     case actionTypes.SET_SELECTED_ITEM_ID:
       return { ...state, selectedItemId: action.id };

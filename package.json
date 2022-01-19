@@ -78,6 +78,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
     "classnames": "^2.3.1",
     "electron-is-dev": "^2.0.0",
     "electron-window-state": "^5.0.3",

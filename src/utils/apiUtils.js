@@ -1,8 +1,10 @@
 const apiUtils = {
-  async validateLanguageFolder(folder) {
-    const isValid = await window.API.validateLanguageFolder(folder);
+  async loadAppVersion() {
+    return await window.API.loadAppVersion();
+  },
 
-    return isValid;
+  async validateLanguageFolder(folder) {
+    return await window.API.validateLanguageFolder(folder);
   },
 
   async loadData(settings) {
@@ -35,6 +37,10 @@ const apiUtils = {
 
   async closeSplashAndShowApp() {
     window.API.closeSplashAndShowApp();
+  },
+
+  async openBrowserWithURL(url) {
+    window.API.openBrowserWithURL(url);
   }
 };
 

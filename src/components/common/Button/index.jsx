@@ -1,7 +1,11 @@
 import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { ClipLoader } from 'react-spinners';
+
+import Icon, { RESPONSIVE } from '../Icon';
+import settingsSelectors from '../../../selectors/settings';
 
 import './styles.scss';
 
@@ -13,7 +17,9 @@ const getContent = (text, icon, loading) => {
   return icon || text;
 };
 
-const Button = ({ text, icon, tooltip, onClick, loading, disabled, borderless }) => {
+const Button = ({ text, icon, marker, tooltip, onClick, loading, disabled, borderless }) => {
+  const compactLayout = useSelector(settingsSelectors.isCompactLayout);
+
   const classes = classNames(
     'button',
     borderless && 'button--borderless',
@@ -38,6 +44,13 @@ const Button = ({ text, icon, tooltip, onClick, loading, disabled, borderless })
       disabled={disabled}
     >
       <div className="button__content">{getContent(text, icon, loading)}</div>
+      {marker && (
+        <div className="button__marker">
+          <Icon size={RESPONSIVE}>
+            {!compactLayout && marker}
+          </Icon>
+        </div>
+      )}
     </button>
   );
 };

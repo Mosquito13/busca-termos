@@ -1,3 +1,5 @@
+@import '../../sass/styles.scss';
+
 .about {
   margin-top: 4rem;
   display: flex;
@@ -13,17 +15,40 @@
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 5rem 0;
   }
 
   &__info-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 3rem;
 
     & > *:first-child {
       margin-bottom: 0.5rem;
+    }
+  }
+
+  &__info-updates {
+    display: flex;
+  }
+
+  &__info-updates-icon {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: .1rem;
+    margin-right: 1rem;
+    @include themify() {
+      background-color: themed('color-success');
+      border: 1px solid currentColor;
+    }
+
+    &--red {
+      @include themify() {
+        background-color: themed('color-danger');
+      }
     }
   }
 }

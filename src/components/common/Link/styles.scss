@@ -1,0 +1,23 @@
+@import '../../../sass/styles.scss';
+
+.link {
+  display: flex;
+  background-color: transparent;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    @include themify() {
+      color: themed('color-contrast');
+    }
+  }
+
+  &__icon {
+    margin-left: 1rem;
+  }
+}

@@ -1,4 +1,4 @@
-const actions = {
+const actionTypes = {
   SET_MAXIMIZED: 'BuscaTermos/Frame/set_maximized',
 
   SET_LANGUAGE_FOLDER_ERROR: 'BuscaTermos/Settings/set_language_folder_error',
@@ -15,10 +15,11 @@ const actions = {
   SET_TRANSLATION: 'BuscaTermos/Translation/set_translation',
 
   SET_SELECTED_ITEM_ID: 'BuscaTermos/Core/set_selected_item_id',
+  SET_APP_HAS_UPDATE: 'BuscaTermos/Core/set_app_has_update',
+  SET_APP_VERSION: 'BuscaTermos/core/set_app_version',
   SET_LOADING: 'BuscaTermos/Core/set_loading',
   SET_FILTER: 'BuscaTermos/Core/set_filter',
   SET_DATA: 'BuscaTermos/Core/set_data'
 };
 
-export default actions;
-
+export default actionTypes;
