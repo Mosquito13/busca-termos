@@ -982,7 +982,7 @@ exports[`Settings snapshots should render 1`] = `
       <div
         className="button__content"
       >
-        Aplicar
+        Voltar
       </div>
     </button>
   </div>

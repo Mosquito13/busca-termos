@@ -51,7 +51,7 @@ const Settings = () => {
   const mainLanguage = useSelector(settingsSelectors.getMainLanguage);
   const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
-  const onClickApply = useCallback(() => {
+  const onClickBack = useCallback(() => {
     dispatch(setLoading(true));
     dispatch(saveSettings({ mainLanguage, translation, darkTheme, compactLayout }));
     navigate(-1);
@@ -120,9 +120,9 @@ const Settings = () => {
       </div>
       <div className="settings__footer">
         <Button
-          text="Aplicar"
-          onClick={onClickApply}
-          data-testid="btn-apply"
+          text="Voltar"
+          onClick={onClickBack}
+          data-testid="btn-back"
         />
       </div>
     </div>

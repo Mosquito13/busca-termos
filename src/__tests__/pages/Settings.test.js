@@ -91,7 +91,7 @@ describe(`${Settings.name}`, () => {
     });
 
     it('should save and navigate back', () => {
-      wrapper.find('[data-testid="btn-apply"]').simulate('click');
+      wrapper.find('[data-testid="btn-back"]').simulate('click');
       expect(dispatchMock).toBeCalledTimes(2);
       expect(dispatchMock).nthCalledWith(1, coreActions.setLoading(true));
       expect(dispatchMock).nthCalledWith(2, settingsActions.saveSettings(
