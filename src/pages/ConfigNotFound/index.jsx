@@ -9,7 +9,7 @@ import Paragraph from '../../components/common/Paragraph';
 import Icon, { LARGE } from '../../components/common/Icon';
 import LanguageFolderPicker from '../../components/LanguageFolderPicker';
 
-import settingsActions from '../../actions/settings';
+import { setLanguageFolder, validateAndSaveFirstSettings } from '../../actions/settings';
 import settingsSelectors from '../../selectors/settings';
 
 import './styles.scss';
@@ -29,11 +29,11 @@ const ConfigNotFound = () => {
   }, [isValid, navigate]);
 
   const handleChangeLanguageFolder = useCallback((value) => {
-    dispatch(settingsActions.setLanguageFolder(value));
+    dispatch(setLanguageFolder(value));
   }, [dispatch]);
 
   const onClickValidate = useCallback(() => {
-    dispatch(settingsActions.validateAndSaveFirstSettings(languageFolder));
+    dispatch(validateAndSaveFirstSettings(languageFolder));
   }, [dispatch, languageFolder]);
 
   return (
@@ -58,6 +58,7 @@ const ConfigNotFound = () => {
           error={languageFolderError}
           onChange={handleChangeLanguageFolder}
           disabled={isValidating}
+          data-testid="folder-picker"
         />
       </div>
       <div className="config-not-found__btn-validate">
@@ -65,6 +66,7 @@ const ConfigNotFound = () => {
           text="Validar e salvar"
           loading={isValidating}
           onClick={onClickValidate}
+          data-testid="btn-save"
         />
       </div>
     </div>

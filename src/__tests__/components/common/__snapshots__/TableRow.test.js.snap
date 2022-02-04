@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableRow snapshots should render 1`] = `
+<div
+  className="table__row"
+>
+  <div
+    className="table__cell table__cell--small"
+    onClick={[Function]}
+  >
+    <span
+      className="table__cell-text"
+    >
+      An id
+    </span>
+  </div>
+  <div
+    className="table__cell"
+    onClick={[Function]}
+  >
+    <span
+      className="table__cell-text"
+    >
+      A name
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TableRow snapshots should render with header modifier 1`] = `
+<div
+  className="table__row table__row--header"
+>
+  <div
+    className="table__cell table__cell--header table__cell--small"
+    onClick={[Function]}
+  >
+    <span
+      className="table__cell-text"
+    >
+      Id
+    </span>
+  </div>
+  <div
+    className="table__cell table__cell--header"
+    onClick={[Function]}
+  >
+    <span
+      className="table__cell-text"
+    >
+      Name
+    </span>
+  </div>
+</div>
+`;

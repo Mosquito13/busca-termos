@@ -1,41 +1,25 @@
 import actionTypes from '../constants/actionTypes';
 import apiUtils from '../utils/apiUtils';
 
-const frameActions = {
-  setMaximized(value) {
-    return {
-      type: actionTypes.SET_MAXIMIZED,
-      value
-    };
-  },
+export const setMaximized = (value) => ({
+  type: actionTypes.SET_MAXIMIZED,
+  value
+});
 
-  close() {
-    return () => apiUtils.close();
-  },
+export const close = () => () => apiUtils.close();
 
-  minimize() {
-    return () => apiUtils.minimize();
-  },
+export const minimize = () => () => apiUtils.minimize();
 
-  maximize() {
-    return () => apiUtils.maximize();
-  },
+export const maximize = () => () => apiUtils.maximize();
 
-  unmaximize() {
-    return () => apiUtils.unmaximize();
-  },
+export const unmaximize = () => () => apiUtils.unmaximize();
 
-  registerFrameListeners() {
-    return (dispatch) => {
-      apiUtils.registerMaximizeListener(() => {
-        dispatch(this.setMaximized(true));
-      });
+export const registerFrameListeners = () => (dispatch) => {
+  apiUtils.registerMaximizeListener(() => {
+    dispatch(setMaximized(true));
+  });
 
-      apiUtils.registerUnmaximizeListener(() => {
-        dispatch(this.setMaximized(false));
-      });
-    };
-  }
+  apiUtils.registerUnmaximizeListener(() => {
+    dispatch(setMaximized(false));
+  });
 };
-
-export default frameActions;

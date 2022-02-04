@@ -22,9 +22,9 @@ const Select = ({ options, value, onChange, useRoundIconBorder }) => {
   }, [setShowDropdown, showDropdown]);
 
   useEffect(() => {
-    document.body.addEventListener('click', closeDropdown);
+    document.addEventListener('click', closeDropdown);
 
-    return () => document.body.removeEventListener('click', closeDropdown);
+    return () => document.removeEventListener('click', closeDropdown);
   }, [closeDropdown]);
 
   const selectedValue = options?.find((o) => o.value === value);
@@ -64,6 +64,7 @@ const Select = ({ options, value, onChange, useRoundIconBorder }) => {
             selected={option.value === value}
             onSelect={() => onChange(option.value)}
             useRoundIconBorder={useRoundIconBorder}
+            data-testid="select-option"
           />
         ))}
       </div>

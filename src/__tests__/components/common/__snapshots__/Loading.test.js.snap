@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading snapshots should render with show 1`] = `
+<div
+  className="loading"
+>
+  <div
+    className="loading__icon"
+  >
+    <span
+      className="css-kf4vrf"
+    >
+      <span
+        className="css-1u65263"
+      />
+      <span
+        className="css-p9qef"
+      />
+      <span
+        className="css-17ifzby"
+      />
+      <span
+        className="css-1vh5u8m"
+      />
+      <span
+        className="css-1up17uy"
+      />
+      <span
+        className="css-lkr3bi"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Loading snapshots should render without show 1`] = `
+<div
+  className="loading loading--loaded"
+>
+  <div
+    className="loading__icon"
+  >
+    <span
+      className="css-kf4vrf"
+    >
+      <span
+        className="css-1u65263"
+      />
+      <span
+        className="css-p9qef"
+      />
+      <span
+        className="css-17ifzby"
+      />
+      <span
+        className="css-1vh5u8m"
+      />
+      <span
+        className="css-1up17uy"
+      />
+      <span
+        className="css-lkr3bi"
+      />
+    </span>
+  </div>
+</div>
+`;

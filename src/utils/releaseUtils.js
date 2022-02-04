@@ -1,6 +1,6 @@
 const releaseUtils = {
   parseLastRelease(releases) {
-    if (!releases || releases?.data?.length < 1) {
+    if (!releases?.data?.length) {
       return [];
     }
 

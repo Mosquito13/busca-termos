@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshots should render borderless 1`] = `
+<button
+  className="button button--borderless"
+  onClick={[Function]}
+>
+  <div
+    className="button__content"
+  >
+    A text
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render disabled 1`] = `
+<button
+  className="button button--disabled"
+  disabled={true}
+  onClick={[Function]}
+>
+  <div
+    className="button__content"
+  >
+    A text
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render loading 1`] = `
+<button
+  className="button button--loading"
+  onClick={[Function]}
+>
+  <div
+    className="button__content"
+  >
+    <span
+      className="css-19vnu2x"
+    />
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render with icon 1`] = `
+<button
+  className="button button--with-icon"
+  onClick={[Function]}
+  title="A tooltip"
+>
+  <div
+    className="button__content"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+      />
+      <polygon
+        points="12 15 17 21 7 21 12 15"
+      />
+    </svg>
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render with marker 1`] = `
+<button
+  className="button button--with-icon"
+  onClick={[Function]}
+  title="A tooltip"
+>
+  <div
+    className="button__content"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+      />
+      <polygon
+        points="12 15 17 21 7 21 12 15"
+      />
+    </svg>
+  </div>
+  <div
+    className="button__marker"
+  >
+    <div
+      className="icon"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+        />
+        <polygon
+          points="12 15 17 21 7 21 12 15"
+        />
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render with marker in compact layout 1`] = `
+<button
+  className="button button--with-icon"
+  onClick={[Function]}
+  title="A tooltip"
+>
+  <div
+    className="button__content"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+      />
+      <polygon
+        points="12 15 17 21 7 21 12 15"
+      />
+    </svg>
+  </div>
+  <div
+    className="button__marker"
+  >
+    <div
+      className="icon"
+    />
+  </div>
+</button>
+`;
+
+exports[`Button snapshots should render with text 1`] = `
+<button
+  className="button"
+  onClick={[Function]}
+>
+  <div
+    className="button__content"
+  >
+    A text
+  </div>
+</button>
+`;

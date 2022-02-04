@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfigNotFound snapshots should render 1`] = `
+<div
+  className="config-not-found"
+>
+  <div
+    className="icon icon--large"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="9"
+        y2="13"
+      />
+      <line
+        x1="12"
+        x2="12.01"
+        y1="17"
+        y2="17"
+      />
+    </svg>
+  </div>
+  <div
+    className="config-not-found__message"
+  >
+    <div
+      className="config-not-found__message-title"
+    >
+      <h3
+        className="heading-3"
+      >
+        Configuração não encontrada.
+      </h3>
+    </div>
+    <div
+      className="config-not-found__message-help"
+    >
+      <p
+        className="paragraph"
+      >
+        Insira ou selecione o caminho até a pasta language do seu repositório.
+      </p>
+    </div>
+    <div
+      className="config-not-found__message-help-example"
+    >
+      <p
+        className="paragraph paragraph--small"
+      >
+        A pasta language fica em {{seu_repositorio}}/System/web/include/language
+      </p>
+    </div>
+  </div>
+  <div
+    className="config-not-found__folder-picker"
+  >
+    <div
+      className="language-folder-picker"
+    >
+      <div
+        className="language-folder-picker__fields"
+      >
+        <div
+          className="input-text"
+        >
+          <input
+            className="input-text__input"
+            disabled={false}
+            onChange={[Function]}
+            placeholder="Caminho até a pasta language..."
+            spellCheck={false}
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="language-folder-picker__button"
+        >
+          <button
+            className="button button--with-icon"
+            disabled={false}
+            onClick={[Function]}
+            title="Selecionar pasta..."
+          >
+            <div
+              className="button__content"
+            >
+              <div
+                className="icon icon--medium"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="1"
+                  />
+                  <circle
+                    cx="19"
+                    cy="12"
+                    r="1"
+                  />
+                  <circle
+                    cx="5"
+                    cy="12"
+                    r="1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <input
+          className="language-folder-picker__input-file"
+          directory=""
+          id="filepicker"
+          name="fileList"
+          onChange={[Function]}
+          type="file"
+          webkitdirectory=""
+        />
+      </div>
+      <div
+        className="language-folder-picker__error language-folder-picker__error--hidden"
+      >
+        
+      </div>
+    </div>
+  </div>
+  <div
+    className="config-not-found__btn-validate"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      <div
+        className="button__content"
+      >
+        Validar e salvar
+      </div>
+    </button>
+  </div>
+</div>
+`;

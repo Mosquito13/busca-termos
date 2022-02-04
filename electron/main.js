@@ -96,6 +96,10 @@ ipcMain.once('show-app', () => {
   appWindow.show();
 });
 
+ipcMain.handle('getAppVersion', () => {
+  return app.getVersion();
+});
+
 ipcMain.on('close', () => appWindow.close());
 ipcMain.on('minimize', () => appWindow.minimize());
 ipcMain.on('maximize', () => appWindow.maximize());

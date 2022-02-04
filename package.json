@@ -7,7 +7,7 @@
   "scripts": {
     "start": "concurrently -k -n electron,react -c \"magenta,cyan\" \"electron .\" \"react-scripts start\"",
     "test:react": "react-scripts test",
-    "test:react-coverage": "npm run test:react -- --coverage --watchAll",
+    "test:react-coverage": "npm run test:react -- --coverage",
     "test:api": "react-scripts test -- --config=jest.config.js",
     "build:react": "react-scripts build",
     "build:electron-windows": "electron-builder --win --x64",
@@ -25,10 +25,10 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
       }
     }
   },
@@ -38,7 +38,8 @@
     "appId": "com.mosquito.buscaTermos",
     "files": [
       "build/**",
-      "electron/**"
+      "electron/**",
+      "version"
     ],
     "win": {
       "target": [

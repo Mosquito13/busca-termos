@@ -15,12 +15,10 @@ const BaseLayout = () => {
   useEffect(() => {
     const htmlDOM = document.getElementsByTagName('html')?.[0];
 
-    if (!htmlDOM) return;
-
     if (compactLayout) {
-      htmlDOM.classList.add('compact');
+      htmlDOM?.classList?.add?.('compact');
     } else {
-      htmlDOM.classList.remove('compact');
+      htmlDOM?.classList?.remove?.('compact');
     }
   }, [compactLayout]);
 

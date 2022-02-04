@@ -12,4 +12,5 @@ const storageUtils = {
   }
 };
 
+export { STORAGE_KEY };
 export default storageUtils;

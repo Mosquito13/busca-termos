@@ -14,9 +14,9 @@ import LanguageTable from '../../components/LanguageTable';
 import TranslationsPanel from '../../components/TranslationsPanel';
 
 import settingsSelectors from '../../selectors/settings';
-import settingsActions from '../../actions/settings';
+import { loadSettings } from '../../actions/settings';
+import { setFilter } from '../../actions/core';
 import coreSelectors from '../../selectors/core';
-import coreActions from '../../actions/core';
 
 import './styles.scss';
 
@@ -35,7 +35,7 @@ const Main = () => {
     ignoreInputFields: false
   });
 
-  useEffect(() => dispatch(settingsActions.loadSettings()), [dispatch]);
+  useEffect(() => dispatch(loadSettings()), [dispatch]);
 
   useEffect(() => {
     if (!isValid) {
@@ -52,9 +52,10 @@ const Main = () => {
   const onClickAbout = useCallback(() => navigate('/about'), [navigate]);
   const onClickSettings = useCallback(() => navigate('/settings'), [navigate]);
 
-  const filterTable = useCallback((value) => dispatch(coreActions.setFilter(value)), [dispatch]);
+  const filterTable = useCallback((value) => dispatch(setFilter(value)), [dispatch]);
   const debouncedFilterTable = useMemo(() => debounce(filterTable, 500), [filterTable]);
 
+  /* istanbul ignore next: something weird is happening that debouncedFilterTable is undefined here */
   const handleChange = useCallback((value) => {
     setSearchValue(value);
     debouncedFilterTable(value);
@@ -74,6 +75,7 @@ const Main = () => {
               value={searchValue}
               onChange={handleChange}
               disabled={isLoading}
+              data-testid="search-field"
             />
           </div>
           <div className="main__header-buttons">
@@ -86,6 +88,7 @@ const Main = () => {
                 </Icon>
               }
               onClick={onClickSettings}
+              data-testid="btn-settings"
             />
             <Button
               borderless
@@ -99,6 +102,7 @@ const Main = () => {
               }
               marker={appHasUpdate && <FiRefreshCw />}
               onClick={onClickAbout}
+              data-testid="btn-about"
             />
           </div>
         </div>

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrameButton snapshots should render close button 1`] = `
+<button
+  className="app-frame__button app-frame__button--close"
+  onClick={[MockFunction]}
+>
+  <div
+    className="app-frame__button-icon"
+  >
+    <span
+      className="an-icon"
+    />
+  </div>
+</button>
+`;
+
+exports[`FrameButton snapshots should render default button 1`] = `
+<button
+  className="app-frame__button"
+  onClick={[MockFunction]}
+>
+  <div
+    className="app-frame__button-icon"
+  >
+    <span
+      className="an-icon"
+    />
+  </div>
+</button>
+`;

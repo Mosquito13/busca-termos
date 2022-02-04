@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputText snapshots should render borderless 1`] = `
+<div
+  className="input-text"
+>
+  <input
+    className="input-text__input input-text__input--borderless"
+    onChange={[Function]}
+    placeholder=""
+    spellCheck={false}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`InputText snapshots should render disabled 1`] = `
+<div
+  className="input-text"
+>
+  <input
+    className="input-text__input input-text__input--disabled"
+    disabled={true}
+    onChange={[Function]}
+    placeholder=""
+    spellCheck={false}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`InputText snapshots should render without modifier 1`] = `
+<div
+  className="input-text"
+>
+  <input
+    className="input-text__input"
+    onChange={[Function]}
+    placeholder=""
+    spellCheck={false}
+    type="text"
+    value=""
+  />
+</div>
+`;

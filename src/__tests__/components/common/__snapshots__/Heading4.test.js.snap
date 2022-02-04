@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading4 snapshots should render 1`] = `
+<h4
+  className="heading-4"
+>
+  value for heading
+</h4>
+`;

@@ -6,7 +6,7 @@ import Icon, { SMALL } from '../common/Icon';
 import InputText from '../common/InputText';
 
 import coreSelectors from '../../selectors/core';
-import translationActions from '../../actions/translation';
+import { loadTranslation } from '../../actions/translation';
 import translationSelectors from '../../selectors/translation';
 
 import './styles.scss';
@@ -18,7 +18,7 @@ const TranslationField = ({ id, tooltip, icon }) => {
 
   useEffect(() => {
     if (selectedTermId) {
-      dispatch(translationActions.loadTranslation(id, selectedTermId));
+      dispatch(loadTranslation(id, selectedTermId));
     }
   }, [dispatch, id, selectedTermId]);
 

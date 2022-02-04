@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState snapshots should render 1`] = `
+<div
+  className="table__empty-state"
+>
+  <div
+    className="table__empty-state-message"
+  >
+    <h4
+      className="heading-4"
+    >
+      Nenhum resultado encontrado.
+    </h4>
+  </div>
+  <div
+    className="table__empty-state-image-wrapper"
+  >
+    <div
+      className="table__empty-state-image"
+    >
+      <svg>
+        emptystate.svg
+      </svg>
+    </div>
+  </div>
+</div>
+`;

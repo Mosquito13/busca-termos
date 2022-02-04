@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageTable snapshots should render loading 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table__header"
+  >
+    <div
+      className="table__row table__row--header"
+    >
+      <div
+        className="table__cell table__cell--header table__cell--small"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Código
+        </span>
+      </div>
+      <div
+        className="table__cell table__cell--header"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Termo
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="table__body"
+  >
+    <div
+      className="table__empty-state"
+    >
+      <div
+        className="table__empty-state-message"
+      >
+        <h4
+          className="heading-4"
+        >
+          Nenhum resultado encontrado.
+        </h4>
+      </div>
+      <div
+        className="table__empty-state-image-wrapper"
+      >
+        <div
+          className="table__empty-state-image"
+        >
+          <svg>
+            emptystate.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LanguageTable snapshots should render without loading 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table__header"
+  >
+    <div
+      className="table__row table__row--header"
+    >
+      <div
+        className="table__cell table__cell--header table__cell--small"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Código
+        </span>
+      </div>
+      <div
+        className="table__cell table__cell--header"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Termo
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="table__body"
+  >
+    <div
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    />
+  </div>
+</div>
+`;

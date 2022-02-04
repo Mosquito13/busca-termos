@@ -8,7 +8,7 @@ import { SMALL, AUTO } from './TableCell';
 import EmptyState from './EmptyState';
 import TableRow from './TableRow';
 
-import coreActions from '../../../actions/core';
+import { setSelectedItemId } from '../../../actions/core';
 import settingsSelectors from '../../../selectors/settings';
 
 import './styles.scss';
@@ -24,7 +24,7 @@ const Table = ({ data, columns, idField }) => {
     (itemId, cellId, cellValue) => {
       window.navigator.clipboard.writeText(cellValue);
       setSelectedCell(cellId);
-      dispatch(coreActions.setSelectedItemId(itemId));
+      dispatch(setSelectedItemId(itemId));
     },
     [dispatch]
   );
@@ -35,7 +35,7 @@ const Table = ({ data, columns, idField }) => {
         <TableRow header columns={columns} />
       </div>
       <div className="table__body">
-        {Boolean(!data?.length) && <EmptyState />}
+        {Boolean(!data?.length) && <EmptyState data-testid="empty-state" />}
         {Boolean(data?.length) && (
           <AutoSizer>
             {({ width, height }) => (
@@ -44,6 +44,7 @@ const Table = ({ data, columns, idField }) => {
                 height={height}
                 itemSize={compactLayout ? 24 : 30}
                 itemCount={data.length}
+                data-testid="fixed-size-list"
               >
                 {({ index, style }) => (
                   <div style={style}>
@@ -54,6 +55,7 @@ const Table = ({ data, columns, idField }) => {
                       onSelect={onSelect}
                       selectedCell={selectedCell}
                       idField={idField}
+                      data-testid="table-row"
                     />
                   </div>
                 )}

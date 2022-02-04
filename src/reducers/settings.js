@@ -18,7 +18,7 @@ const initial = {
   mainLanguage: languageMapping.BRAZIL.id,
   translation: translationInitial,
   compactLayout: false,
-  darkTheme: true
+  darkTheme: false
 };
 
 const getNewSettings = (state, values) => {
@@ -37,7 +37,7 @@ const getNewSettings = (state, values) => {
   };
 };
 
-const settingsReducer = (state = initial, action) => {
+const settingsReducer = (state = initial, action = {}) => {
   switch (action.type) {
     case actionTypes.SET_VALID:
       return { ...state, valid: action.value };
@@ -73,8 +73,10 @@ const settingsReducer = (state = initial, action) => {
       return { ...state, ...getNewSettings(state, action.value) };
 
     case actionTypes.SAVE:
-      storageUtils.setSettings(getNewSettings(state, action.values));
-      return { ...state, languageFolderError: '' };
+      const newSettings = getNewSettings(state, action.values);
+
+      storageUtils.setSettings(newSettings);
+      return { ...state, ...newSettings, languageFolderError: '' };
 
     default:
       return state;

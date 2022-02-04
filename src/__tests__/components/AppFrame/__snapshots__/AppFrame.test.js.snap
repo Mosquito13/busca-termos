@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppFrame snapshots should render maximized 1`] = `
+<div
+  className="app-frame"
+>
+  <div
+    className="app-frame__title"
+  >
+    <div
+      className="app-frame__title-icon"
+      onDoubleClick={[Function]}
+    >
+      <svg>
+        icon.svg
+      </svg>
+    </div>
+  </div>
+  <div
+    className="app-frame__buttons"
+  >
+    <button
+      className="app-frame__button"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14 8v1H3V8h11z"
+          />
+        </svg>
+      </div>
+    </button>
+    <button
+      className="app-frame__button"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 5v9h9V5H3zm8 8H4V6h7v7z"
+          />
+          <path
+            clipRule="evenodd"
+            d="M5 5h1V4h7v7h-1v1h2V3H5v2z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </button>
+    <button
+      className="app-frame__button app-frame__button--close"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`AppFrame snapshots should render unmaximized 1`] = `
+<div
+  className="app-frame"
+>
+  <div
+    className="app-frame__title"
+  >
+    <div
+      className="app-frame__title-icon"
+      onDoubleClick={[Function]}
+    >
+      <svg>
+        icon.svg
+      </svg>
+    </div>
+  </div>
+  <div
+    className="app-frame__buttons"
+  >
+    <button
+      className="app-frame__button"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14 8v1H3V8h11z"
+          />
+        </svg>
+      </div>
+    </button>
+    <button
+      className="app-frame__button"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 3v10h10V3H3zm9 9H4V4h8v8z"
+          />
+        </svg>
+      </div>
+    </button>
+    <button
+      className="app-frame__button app-frame__button--close"
+      onClick={[Function]}
+    >
+      <div
+        className="app-frame__button-icon"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>
+`;

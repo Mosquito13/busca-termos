@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TranslationField snapshots should render 1`] = `
+<div
+  className="translation-field"
+>
+  <div
+    className="translation-field__flag"
+  >
+    <div
+      className="translation-field__icon"
+      title="Turco"
+    >
+      <div
+        className="icon icon--small"
+      >
+        <svg>
+          turkey.svg
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text"
+  >
+    <input
+      className="input-text__input input-text__input--disabled input-text__input--borderless"
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Selecione um item na lista"
+      spellCheck={false}
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

@@ -10,7 +10,7 @@ import {
 import { ReactComponent as AppIcon } from '../../assets/svg/icon.svg';
 import FrameButton from './FrameButton';
 
-import frameActions from '../../actions/frame';
+import { close, maximize, minimize, registerFrameListeners, unmaximize } from '../../actions/frame';
 import frameSelectors from '../../selectors/frame';
 
 import './styles.scss';
@@ -19,16 +19,16 @@ const AppFrame = () => {
   const dispatch = useDispatch();
   const isMaximized = useSelector(frameSelectors.isMaximized);
 
-  const onClose = useCallback(() => dispatch(frameActions.close()), [dispatch]);
-  const onMinimize = useCallback(() => dispatch(frameActions.minimize()), [dispatch]);
+  const onClose = useCallback(() => dispatch(close()), [dispatch]);
+  const onMinimize = useCallback(() => dispatch(minimize()), [dispatch]);
   const onMaximize = useCallback(() => {
     if (isMaximized) {
-      return dispatch(frameActions.unmaximize());
+      return dispatch(unmaximize());
     }
-    return dispatch(frameActions.maximize());
+    return dispatch(maximize());
   }, [dispatch, isMaximized]);
 
-  useEffect(() => dispatch(frameActions.registerFrameListeners()), [dispatch]);
+  useEffect(() => dispatch(registerFrameListeners()), [dispatch]);
 
   return (
     <div className="app-frame">
@@ -38,12 +38,22 @@ const AppFrame = () => {
         </div>
       </div>
       <div className="app-frame__buttons">
-        <FrameButton icon={<VscChromeMinimize />} onClick={onMinimize} />
         <FrameButton
+          data-testid="btn-minimize"
+          icon={<VscChromeMinimize />}
+          onClick={onMinimize}
+        />
+        <FrameButton
+          data-testid="btn-maximize"
           icon={isMaximized ? <VscChromeRestore /> : <VscChromeMaximize />}
           onClick={onMaximize}
         />
-        <FrameButton close icon={<VscChromeClose />} onClick={onClose} />
+        <FrameButton
+          close
+          data-testid="btn-close"
+          icon={<VscChromeClose />}
+          onClick={onClose}
+        />
       </div>
     </div>
   );

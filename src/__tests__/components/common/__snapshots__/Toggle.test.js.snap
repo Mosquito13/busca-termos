@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle snapshots should render checked 1`] = `
+<div
+  className="toggle"
+>
+  <div
+    className="toggle__input toggle__input--checked"
+    onClick={null}
+  >
+    <div
+      className="toggle__circle toggle__circle--checked"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="toggle__label"
+    onClick={null}
+  />
+</div>
+`;
+
+exports[`Toggle snapshots should render disabled 1`] = `
+<div
+  className="toggle"
+>
+  <div
+    className="toggle__input toggle__input--checked toggle__input--disabled"
+    onClick={null}
+  >
+    <div
+      className="toggle__circle toggle__circle--checked"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="toggle__label toggle__label--disabled"
+    onClick={null}
+  />
+</div>
+`;
+
+exports[`Toggle snapshots should render unchecked 1`] = `
+<div
+  className="toggle"
+>
+  <div
+    className="toggle__input"
+    onClick={null}
+  >
+    <div
+      className="toggle__circle"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="toggle__label"
+    onClick={null}
+  />
+</div>
+`;
+
+exports[`Toggle snapshots should render with icon 1`] = `
+<div
+  className="toggle"
+>
+  <div
+    className="toggle__input toggle__input--checked"
+    onClick={null}
+  >
+    <div
+      className="toggle__circle toggle__circle--with-icon toggle__circle--checked"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="22 12 18 12 15 21 9 3 6 12 2 12"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="toggle__label"
+    onClick={null}
+  />
+</div>
+`;

@@ -1,11 +1,9 @@
 const fs = require('fs').promises;
 const path = require('path');
-const { shell } = require('electron');
+const { ipcRenderer, shell } = require('electron');
 
 const { parseAll } = require('../languageFileParser');
 const languages = require('../constants/languages');
-
-const baseDir = process.cwd();
 
 module.exports = {
   async validateLanguageFolder(folder) {
@@ -22,9 +20,7 @@ module.exports = {
   },
 
   async loadAppVersion() {
-    const version = await fs.readFile(path.join(baseDir, 'version'));
-
-    return version.toString();
+    return await ipcRenderer.invoke('getAppVersion');
   },
 
   async openBrowserWithURL(url) {

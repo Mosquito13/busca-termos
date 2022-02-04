@@ -11,7 +11,7 @@ import Paragraph from '../../components/common/Paragraph';
 import Icon, { RESPONSIVE } from '../../components/common/Icon';
 
 import url from '../../constants/url';
-import coreActions from '../../actions/core';
+import { openBrowserWithURL, setLoading } from '../../actions/core';
 import coreSelectors from '../../selectors/core';
 
 import './styles.scss';
@@ -24,16 +24,16 @@ const About = () => {
   const lastUpdateLink = useSelector(coreSelectors.getUpdateURL);
 
   const onClickIssueLink = useCallback(() => {
-    dispatch(coreActions.openBrowserWithURL(url.ISSUES_PAGE));
+    dispatch(openBrowserWithURL(url.ISSUES_PAGE));
   }, [dispatch]);
 
   const onClickUpdateLink = useCallback(() => {
-    dispatch(coreActions.openBrowserWithURL(lastUpdateLink));
+    dispatch(openBrowserWithURL(lastUpdateLink));
   }, [dispatch, lastUpdateLink]);
 
   const onClickClose = useCallback(() => {
     navigate(-1);
-    dispatch(coreActions.setLoading(true));
+    dispatch(setLoading(true));
   }, [navigate, dispatch]);
 
   const classesIconUpdate = classNames(
@@ -67,9 +67,13 @@ const About = () => {
                 value="Existem atualizações disponíveis"
                 icon={<FiExternalLink />}
                 onClick={onClickUpdateLink}
+                data-testid="link-update"
               />
             ) : (
-              <Paragraph value="O aplicativo está atualizado" />
+              <Paragraph
+                value="O aplicativo está atualizado"
+                data-testid="p-app-updated"
+              />
             )}
           </div>
         </div>
@@ -84,11 +88,16 @@ const About = () => {
             value="BuscaTermos - Issues"
             icon={<FiExternalLink />}
             onClick={onClickIssueLink}
+            data-testid="link-issues"
           />
         </div>
       </div>
       <div className="about__button">
-        <Button text="Voltar" onClick={onClickClose} />
+        <Button
+          text="Voltar"
+          onClick={onClickClose}
+          data-testid="btn-close"
+        />
       </div>
     </div>
   );

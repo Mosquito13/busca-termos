@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageFolderPicker snapshots should render disabled 1`] = `
+<div
+  className="language-folder-picker"
+>
+  <div
+    className="language-folder-picker__fields"
+  >
+    <div
+      className="input-text"
+    >
+      <input
+        className="input-text__input input-text__input--disabled"
+        disabled={true}
+        onChange={[Function]}
+        placeholder="Caminho até a pasta language..."
+        spellCheck={false}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="language-folder-picker__button"
+    >
+      <button
+        className="button button--with-icon button--disabled"
+        disabled={true}
+        onClick={[Function]}
+        title="Selecionar pasta..."
+      >
+        <div
+          className="button__content"
+        >
+          <div
+            className="icon icon--medium"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="19"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="5"
+                cy="12"
+                r="1"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <input
+      className="language-folder-picker__input-file"
+      directory=""
+      id="filepicker"
+      name="fileList"
+      onChange={[Function]}
+      type="file"
+      webkitdirectory=""
+    />
+  </div>
+  <div
+    className="language-folder-picker__error language-folder-picker__error--hidden"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`LanguageFolderPicker snapshots should render with error 1`] = `
+<div
+  className="language-folder-picker"
+>
+  <div
+    className="language-folder-picker__fields"
+  >
+    <div
+      className="input-text"
+    >
+      <input
+        className="input-text__input"
+        onChange={[Function]}
+        placeholder="Caminho até a pasta language..."
+        spellCheck={false}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="language-folder-picker__button"
+    >
+      <button
+        className="button button--with-icon"
+        onClick={[Function]}
+        title="Selecionar pasta..."
+      >
+        <div
+          className="button__content"
+        >
+          <div
+            className="icon icon--medium"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="19"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="5"
+                cy="12"
+                r="1"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <input
+      className="language-folder-picker__input-file"
+      directory=""
+      id="filepicker"
+      name="fileList"
+      onChange={[Function]}
+      type="file"
+      webkitdirectory=""
+    />
+  </div>
+  <div
+    className="language-folder-picker__error"
+  >
+    <div
+      className="language-folder-picker__error-icon"
+    >
+      <div
+        className="icon icon--extra-small"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"
+          />
+          <line
+            x1="15"
+            x2="9"
+            y1="9"
+            y2="15"
+          />
+          <line
+            x1="9"
+            x2="15"
+            y1="9"
+            y2="15"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="language-folder-picker__error-message"
+    >
+      An error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LanguageFolderPicker snapshots should render with value 1`] = `
+<div
+  className="language-folder-picker"
+>
+  <div
+    className="language-folder-picker__fields"
+  >
+    <div
+      className="input-text"
+    >
+      <input
+        className="input-text__input"
+        onChange={[Function]}
+        placeholder="Caminho até a pasta language..."
+        spellCheck={false}
+        type="text"
+        value="C:/folder/anotherFolder/"
+      />
+    </div>
+    <div
+      className="language-folder-picker__button"
+    >
+      <button
+        className="button button--with-icon"
+        onClick={[Function]}
+        title="Selecionar pasta..."
+      >
+        <div
+          className="button__content"
+        >
+          <div
+            className="icon icon--medium"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="19"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="5"
+                cy="12"
+                r="1"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <input
+      className="language-folder-picker__input-file"
+      directory=""
+      id="filepicker"
+      name="fileList"
+      onChange={[Function]}
+      type="file"
+      webkitdirectory=""
+    />
+  </div>
+  <div
+    className="language-folder-picker__error language-folder-picker__error--hidden"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`LanguageFolderPicker snapshots should render without value 1`] = `
+<div
+  className="language-folder-picker"
+>
+  <div
+    className="language-folder-picker__fields"
+  >
+    <div
+      className="input-text"
+    >
+      <input
+        className="input-text__input"
+        onChange={[Function]}
+        placeholder="Caminho até a pasta language..."
+        spellCheck={false}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="language-folder-picker__button"
+    >
+      <button
+        className="button button--with-icon"
+        onClick={[Function]}
+        title="Selecionar pasta..."
+      >
+        <div
+          className="button__content"
+        >
+          <div
+            className="icon icon--medium"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="19"
+                cy="12"
+                r="1"
+              />
+              <circle
+                cx="5"
+                cy="12"
+                r="1"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <input
+      className="language-folder-picker__input-file"
+      directory=""
+      id="filepicker"
+      name="fileList"
+      onChange={[Function]}
+      type="file"
+      webkitdirectory=""
+    />
+  </div>
+  <div
+    className="language-folder-picker__error language-folder-picker__error--hidden"
+  >
+    
+  </div>
+</div>
+`;

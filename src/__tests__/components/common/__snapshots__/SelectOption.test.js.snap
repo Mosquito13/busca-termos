@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectOption snapshots should render 1`] = `
+<div
+  className="select__option"
+  onClick={[MockFunction]}
+>
+  <div
+    className="select__option-text"
+  >
+    option
+  </div>
+</div>
+`;
+
+exports[`SelectOption snapshots should render selected 1`] = `
+<div
+  className="select__option select__option--selected"
+  onClick={[MockFunction]}
+>
+  <div
+    className="select__option-text"
+  >
+    option
+  </div>
+</div>
+`;
+
+exports[`SelectOption snapshots should render unselectable 1`] = `
+<div
+  className="select__option select__option--unselectable"
+>
+  <div
+    className="select__option-text"
+  >
+    option
+  </div>
+</div>
+`;
+
+exports[`SelectOption snapshots should render with icon 1`] = `
+<div
+  className="select__option"
+  onClick={[MockFunction]}
+>
+  <div
+    className="select__option-icon"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="12"
+        cy="5"
+        r="3"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="22"
+        y2="8"
+      />
+      <path
+        d="M5 12H2a10 10 0 0 0 20 0h-3"
+      />
+    </svg>
+  </div>
+  <div
+    className="select__option-text"
+  >
+    option
+  </div>
+</div>
+`;
+
+exports[`SelectOption snapshots should render with icon with rounded borders 1`] = `
+<div
+  className="select__option"
+  onClick={[MockFunction]}
+>
+  <div
+    className="select__option-icon select__option-icon--rounded-border"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="12"
+        cy="5"
+        r="3"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="22"
+        y2="8"
+      />
+      <path
+        d="M5 12H2a10 10 0 0 0 20 0h-3"
+      />
+    </svg>
+  </div>
+  <div
+    className="select__option-text"
+  >
+    option
+  </div>
+</div>
+`;

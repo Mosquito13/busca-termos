@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fieldset snapshots should render normally 1`] = `
+<fieldset
+  className="fieldset"
+>
+  <legend
+    className="fieldset__title"
+  />
+  <div />
+</fieldset>
+`;
+
+exports[`Fieldset snapshots should render without margin top 1`] = `
+<fieldset
+  className="fieldset fieldset--no-margin-top"
+>
+  <legend
+    className="fieldset__title"
+  />
+  <div />
+</fieldset>
+`;

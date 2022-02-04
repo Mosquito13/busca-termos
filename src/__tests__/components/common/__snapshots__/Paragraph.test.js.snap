@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph snapshots should render default 1`] = `
+<p
+  className="paragraph"
+>
+  text
+</p>
+`;
+
+exports[`Paragraph snapshots should render with bold font 1`] = `
+<p
+  className="paragraph paragraph--bold"
+>
+  text
+</p>
+`;
+
+exports[`Paragraph snapshots should render with small font 1`] = `
+<p
+  className="paragraph paragraph--small"
+>
+  text
+</p>
+`;

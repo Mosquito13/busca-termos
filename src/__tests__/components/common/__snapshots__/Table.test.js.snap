@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table snapshots should render with compact layout 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table__header"
+  >
+    <div
+      className="table__row table__row--header"
+    >
+      <div
+        className="table__cell table__cell--header table__cell--small"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Id
+        </span>
+      </div>
+      <div
+        className="table__cell table__cell--header"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Name
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="table__body"
+  >
+    <div
+      onScroll={[Function]}
+      style={
+        Object {
+          "WebkitOverflowScrolling": "touch",
+          "direction": "ltr",
+          "height": 500,
+          "overflow": "auto",
+          "position": "relative",
+          "width": 500,
+          "willChange": "transform",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": 72,
+            "pointerEvents": undefined,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "height": 24,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id1
+              </span>
+            </div>
+            <div
+              className="table__cell"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name1
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "height": 24,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 24,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--odd table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id2
+              </span>
+            </div>
+            <div
+              className="table__cell table__cell--odd"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name2
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "height": 24,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 48,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id3
+              </span>
+            </div>
+            <div
+              className="table__cell"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name3
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table snapshots should render with default layout 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table__header"
+  >
+    <div
+      className="table__row table__row--header"
+    >
+      <div
+        className="table__cell table__cell--header table__cell--small"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Id
+        </span>
+      </div>
+      <div
+        className="table__cell table__cell--header"
+        onClick={[Function]}
+      >
+        <span
+          className="table__cell-text"
+        >
+          Name
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="table__body"
+  >
+    <div
+      onScroll={[Function]}
+      style={
+        Object {
+          "WebkitOverflowScrolling": "touch",
+          "direction": "ltr",
+          "height": 500,
+          "overflow": "auto",
+          "position": "relative",
+          "width": 500,
+          "willChange": "transform",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": 90,
+            "pointerEvents": undefined,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "height": 30,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id1
+              </span>
+            </div>
+            <div
+              className="table__cell"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name1
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "height": 30,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 30,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--odd table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id2
+              </span>
+            </div>
+            <div
+              className="table__cell table__cell--odd"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name2
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "height": 30,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 60,
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="table__row"
+          >
+            <div
+              className="table__cell table__cell--small"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                id3
+              </span>
+            </div>
+            <div
+              className="table__cell"
+              onClick={[Function]}
+            >
+              <span
+                className="table__cell-text"
+              >
+                name3
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

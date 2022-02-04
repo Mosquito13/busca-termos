@@ -10,7 +10,7 @@ const initial = {
   updateURL: ''
 };
 
-const coreReducer = (state = initial, action) => {
+const coreReducer = (state = initial, action = {}) => {
   switch (action.type) {
     case actionTypes.SET_LOADING:
       return { ...state, loading: action.loading };

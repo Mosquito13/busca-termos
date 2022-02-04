@@ -29,6 +29,7 @@ const getErrorMessage = (error) => {
 const LanguageFolderPicker = ({ value, error, onChange, disabled }) => {
   const inputFileRef = useRef();
 
+  /* istanbul ignore next: user interaction simulation */
   const handleClickButtonFind = useCallback(() => {
     inputFileRef.current.click();
   }, []);
@@ -60,6 +61,7 @@ const LanguageFolderPicker = ({ value, error, onChange, disabled }) => {
           onChange={onChange}
           placeholder="Caminho até a pasta language..."
           disabled={disabled}
+          data-testid="lfp-input"
         />
         <div className="language-folder-picker__button">
           <Button
@@ -71,6 +73,7 @@ const LanguageFolderPicker = ({ value, error, onChange, disabled }) => {
             tooltip="Selecionar pasta..."
             onClick={handleClickButtonFind}
             disabled={disabled}
+            data-testid="lfp-btn"
           />
         </div>
         <input

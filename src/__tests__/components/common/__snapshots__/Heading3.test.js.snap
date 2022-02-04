@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading3 snapshots should render 1`] = `
+<h3
+  className="heading-3"
+>
+  value for heading
+</h3>
+`;

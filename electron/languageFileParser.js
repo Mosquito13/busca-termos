@@ -21,12 +21,10 @@ const parseFileData = (data) => {
   return parsed;
 };
 
-const parseFile = (basePath, language) => {
-  return fs
-    .readFile(path.join(basePath, `sesuite.${language}.utf-8.inc`), 'utf-8')
-    .then((data) => {
-      return [language, parseFileData(data)];
-    });
+const parseFile = async (basePath, language) => {
+  const fileContent = await fs.readFile(path.join(basePath, `sesuite.${language}.utf-8.inc`), 'utf-8');
+
+  return [language, parseFileData(fileContent)];
 };
 
 exports.parseAll = async (basePath) => {

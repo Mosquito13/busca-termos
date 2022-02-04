@@ -6,83 +6,66 @@ import coreSelectors from '../selectors/core';
 import apiUtils from '../utils/apiUtils';
 import url from '../constants/url';
 
-const coreActions = {
-  setLoading(loading) {
-    return {
-      type: actionTypes.SET_LOADING,
-      loading
-    };
-  },
+export const setLoading = (loading) => ({
+  type: actionTypes.SET_LOADING,
+  loading
+});
 
-  setData(data) {
-    return {
-      type: actionTypes.SET_DATA,
-      data
-    };
-  },
+export const setData = (data) => ({
+  type: actionTypes.SET_DATA,
+  data
+});
 
-  setSelectedItemId(id) {
-    return {
-      type: actionTypes.SET_SELECTED_ITEM_ID,
-      id
-    };
-  },
+export const setSelectedItemId = (id) => ({
+  type: actionTypes.SET_SELECTED_ITEM_ID,
+  id
+});
 
-  setFilter(filter) {
-    return {
-      type: actionTypes.SET_FILTER,
-      filter
-    };
-  },
+export const setFilter = (filter) => ({
+  type: actionTypes.SET_FILTER,
+  filter
+});
 
-  setAppVersion(version) {
-    return {
-      type: actionTypes.SET_APP_VERSION,
-      version
-    };
-  },
+export const setAppVersion = (version) => ({
+  type: actionTypes.SET_APP_VERSION,
+  version
+});
 
-  setAppHasUpdate(appHasUpdate, updateURL) {
-    return {
-      type: actionTypes.SET_APP_HAS_UPDATE,
-      appHasUpdate,
-      updateURL
-    };
-  },
+export const setAppHasUpdate = (appHasUpdate, updateURL) => ({
+  type: actionTypes.SET_APP_HAS_UPDATE,
+  appHasUpdate,
+  updateURL
+});
 
-  checkForUpdates(currentVersion) {
-    return async (dispatch, getState) => {
-      const state = getState();
-      const hasUpdate = coreSelectors.getAppHasUpdate(state);
+export const checkForUpdates =
+  (currentVersion) => async (dispatch, getState) => {
+    const state = getState();
+    const hasUpdate = coreSelectors.getAppHasUpdate(state);
 
-      if (hasUpdate === null) {
-        const releases = await axios.get(url.LIST_APP_RELEASES);
-        const [latestReleaseVersion, latestReleaseURL] = releaseUtils.parseLastRelease(releases);
+    if (hasUpdate === null) {
+      const releases = await axios.get(url.LIST_APP_RELEASES);
+      const [latestReleaseVersion, latestReleaseURL] =
+        releaseUtils.parseLastRelease(releases);
 
-        const hasUpdate = releaseUtils.hasUpdate(currentVersion, latestReleaseVersion);
+      const hasUpdate = releaseUtils.hasUpdate(
+        currentVersion,
+        latestReleaseVersion
+      );
 
-        dispatch(this.setAppHasUpdate(hasUpdate, latestReleaseURL));
-      }
-    };
-  },
+      dispatch(setAppHasUpdate(hasUpdate, latestReleaseURL));
+    }
+  };
 
-  loadData(settings) {
-    return async (dispatch) => {
-      const data = await apiUtils.loadData(settings?.languageFolder);
-      const appVersion = await apiUtils.loadAppVersion();
+export const loadData = (settings) => async (dispatch) => {
+  const data = await apiUtils.loadData(settings?.languageFolder);
+  const appVersion = await apiUtils.loadAppVersion();
 
-      dispatch(this.setAppVersion(appVersion));
-      dispatch(this.checkForUpdates(appVersion));
-      dispatch(this.setData(data));
-      dispatch(this.setLoading(false));
-    };
-  },
-
-  openBrowserWithURL(url) {
-    return async () => {
-      apiUtils.openBrowserWithURL(url);
-    };
-  }
+  dispatch(setAppVersion(appVersion));
+  dispatch(checkForUpdates(appVersion));
+  dispatch(setData(data));
+  dispatch(setLoading(false));
 };
 
-export default coreActions;
+export const openBrowserWithURL = (url) => async () => {
+  apiUtils.openBrowserWithURL(url);
+};

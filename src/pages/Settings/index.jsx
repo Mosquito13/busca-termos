@@ -10,8 +10,8 @@ import Button from '../../components/common/Button';
 import Toggle from '../../components/common/Toggle';
 import Select from '../../components/common/Select';
 
-import coreActions from '../../actions/core';
-import settingsActions from '../../actions/settings';
+import { setLoading } from '../../actions/core';
+import { saveSettings, setMainLanguage, toggleCompactLayout, toggleDarkTheme, toggleTranslation } from '../../actions/settings';
 import settingsSelectors from '../../selectors/settings';
 
 import './styles.scss';
@@ -28,6 +28,7 @@ const getLanguageItems = (mainLanguage, translation, onChangeTranslation) => {
           value={translation[id] && mainLanguage !== id}
           onChange={() => onChangeTranslation(id, !translation[id])}
           disabled={mainLanguage === id}
+          data-testid="toggle-translation"
         />
       </div>
     );
@@ -51,26 +52,26 @@ const Settings = () => {
   const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
   const onClickApply = useCallback(() => {
-    dispatch(coreActions.setLoading(true));
-    dispatch(settingsActions.saveSettings({ mainLanguage, translation, darkTheme }));
+    dispatch(setLoading(true));
+    dispatch(saveSettings({ mainLanguage, translation, darkTheme, compactLayout }));
     navigate(-1);
-  }, [navigate, dispatch, mainLanguage, translation, darkTheme]);
+  }, [navigate, dispatch, mainLanguage, translation, darkTheme, compactLayout]);
 
   const onChangeDarkTheme = useCallback(() => {
-    dispatch(settingsActions.toggleDarkTheme(!darkTheme));
+    dispatch(toggleDarkTheme(!darkTheme));
   }, [dispatch, darkTheme]);
 
   const onChangeCompactLayout = useCallback(() => {
-    dispatch(settingsActions.toggleCompactLayout(!compactLayout));
+    dispatch(toggleCompactLayout(!compactLayout));
   }, [dispatch, compactLayout]);
 
   const onChangeMainLanguage = useCallback((value) => {
-    dispatch(settingsActions.setMainLanguage(value));
-    dispatch(settingsActions.toggleTranslation(value, false));
+    dispatch(setMainLanguage(value));
+    dispatch(toggleTranslation(value, false));
   }, [dispatch]);
 
   const onChangeTranslation = useCallback((id, value) => {
-    dispatch(settingsActions.toggleTranslation(id, value));
+    dispatch(toggleTranslation(id, value));
   }, [dispatch]);
 
   const [languageToggles, languageOptions] = getLanguageItems(
@@ -88,6 +89,7 @@ const Settings = () => {
               label="Tema escuro"
               value={darkTheme}
               onChange={onChangeDarkTheme}
+              data-testid="toggle-dark-theme"
             />
           </div>
           <div className="settings__field">
@@ -95,6 +97,7 @@ const Settings = () => {
               label="Tema compacto"
               value={compactLayout}
               onChange={onChangeCompactLayout}
+              data-testid="toggle-compact-layout"
             />
           </div>
         </Fieldset>
@@ -105,6 +108,7 @@ const Settings = () => {
               options={languageOptions}
               value={mainLanguage}
               onChange={onChangeMainLanguage}
+              data-testid="select-main-lang"
             />
           </div>
         </Fieldset>
@@ -115,7 +119,11 @@ const Settings = () => {
         </Fieldset>
       </div>
       <div className="settings__footer">
-        <Button text="Aplicar" onClick={onClickApply} />
+        <Button
+          text="Aplicar"
+          onClick={onClickApply}
+          data-testid="btn-apply"
+        />
       </div>
     </div>
   );

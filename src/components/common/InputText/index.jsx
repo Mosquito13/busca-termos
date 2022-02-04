@@ -59,4 +59,6 @@ InputText.defaultProps = {
   value: ''
 };
 
+InputText.name = 'InputText';
+
 export default InputText;

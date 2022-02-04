@@ -1,115 +1,89 @@
 import apiUtils from '../utils/apiUtils';
 import actionTypes from '../constants/actionTypes';
 import storageUtils from '../utils/storageUtils';
-import coreActions from './core';
+import { loadData, setLoading } from './core';
 
-const settingsActions = {
-  setValid(value) {
-    return {
-      type: actionTypes.SET_VALID,
-      value
-    };
-  },
+export const setValid = (value) => ({
+  type: actionTypes.SET_VALID,
+  value
+});
 
-  setValidating(value) {
-    return {
-      type: actionTypes.SET_VALIDATING,
-      value
-    };
-  },
+export const setValidating = (value) => ({
+  type: actionTypes.SET_VALIDATING,
+  value
+});
 
-  setLanguageFolder(value) {
-    return {
-      type: actionTypes.SET_LANGUAGE_FOLDER,
-      value
-    };
-  },
+export const setLanguageFolder = (value) => ({
+  type: actionTypes.SET_LANGUAGE_FOLDER,
+  value
+});
 
-  setLanguageFolderError(value) {
-    return {
-      type: actionTypes.SET_LANGUAGE_FOLDER_ERROR,
-      value
-    };
-  },
+export const setLanguageFolderError = (value) => ({
+  type: actionTypes.SET_LANGUAGE_FOLDER_ERROR,
+  value
+});
 
-  setMainLanguage(value) {
-    return {
-      type: actionTypes.SET_MAIN_LANGUAGE,
-      value
-    };
-  },
+export const setMainLanguage = (value) => ({
+  type: actionTypes.SET_MAIN_LANGUAGE,
+  value
+});
 
-  toggleTranslation(id, value) {
-    return {
-      type: actionTypes.TOGGLE_TRANSLATION,
-      id,
-      value
-    };
-  },
+export const toggleTranslation = (id, value) => ({
+  type: actionTypes.TOGGLE_TRANSLATION,
+  id,
+  value
+});
 
-  toggleCompactLayout(value) {
-    return {
-      type: actionTypes.TOGGLE_COMPACT_LAYOUT,
-      value
-    };
-  },
+export const toggleCompactLayout = (value) => ({
+  type: actionTypes.TOGGLE_COMPACT_LAYOUT,
+  value
+});
 
-  toggleDarkTheme(value) {
-    return {
-      type: actionTypes.TOGGLE_DARK_THEME,
-      value
-    };
-  },
+export const toggleDarkTheme = (value) => ({
+  type: actionTypes.TOGGLE_DARK_THEME,
+  value
+});
 
-  setSettings(value) {
-    return {
-      type: actionTypes.SET_SETTINGS,
-      value
-    };
-  },
+export const setSettings = (value) => ({
+  type: actionTypes.SET_SETTINGS,
+  value
+});
 
-  validateAndSaveFirstSettings(languageFolder) {
-    return async (dispatch) => {
-      dispatch(this.setValidating(true));
+export const validateAndSaveFirstSettings = (languageFolder) => async (dispatch) => {
+  dispatch(setValidating(true));
 
-      const isValid = await apiUtils.validateLanguageFolder(languageFolder);
+  const isValid = await apiUtils.validateLanguageFolder(languageFolder);
 
-      if (!isValid) {
-        dispatch(this.setLanguageFolderError('Caminho inválido.'));
-        dispatch(this.setValid(false));
-      } else {
-        dispatch(coreActions.setLoading(true));
-        dispatch(this.setValid(true));
-        dispatch(this.saveSettings({ languageFolder }));
-      }
+  if (!isValid) {
+    dispatch(setLanguageFolderError('Caminho inválido.'));
+    dispatch(setValid(false));
+  } else {
+    dispatch(setLoading(true));
+    dispatch(setValid(true));
+    dispatch(saveSettings({ languageFolder }));
+  }
 
-      dispatch(this.setValidating(false));
-    };
-  },
+  dispatch(setValidating(false));
+};
 
-  loadSettings() {
-    return async (dispatch) => {
-      apiUtils.closeSplashAndShowApp();
+export const loadSettings = () => async (dispatch) => {
+  apiUtils.closeSplashAndShowApp();
 
-      const settings = storageUtils.getSettings();
-      const isValid = await apiUtils.validateLanguageFolder(settings?.languageFolder);
+  const settings = storageUtils.getSettings();
+  const isValid = await apiUtils.validateLanguageFolder(
+    settings?.languageFolder
+  );
 
-      if (!isValid) {
-        dispatch(this.setValid(false));
-        dispatch(coreActions.setLoading(false));
-      } else {
-        dispatch(this.setSettings(settings));
-        dispatch(coreActions.loadData(settings));
-      }
-    };
-  },
-
-  saveSettings(values) {
-    return {
-      type: actionTypes.SAVE,
-      values
-    };
+  if (!isValid) {
+    dispatch(setValid(false));
+    dispatch(setLoading(false));
+  } else {
+    dispatch(setSettings(settings));
+    dispatch(loadData(settings));
   }
 };
 
-export default settingsActions;
+export const saveSettings = (values) => ({
+  type: actionTypes.SAVE,
+  values
+});

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link snapshots should render with icon 1`] = `
+<button
+  className="link"
+>
+  <div
+    className="link__text"
+  >
+    Text
+  </div>
+  <div
+    className="link__icon"
+  >
+    <div
+      className="icon"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="8"
+          r="7"
+        />
+        <polyline
+          points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+        />
+      </svg>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`Link snapshots should render without icon 1`] = `
+<button
+  className="link"
+>
+  <div
+    className="link__text"
+  >
+    Text
+  </div>
+</button>
+`;

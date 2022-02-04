@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableCell snapshots should render 1`] = `
+<div
+  className="table__cell"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
+
+exports[`TableCell snapshots should render with header modifier 1`] = `
+<div
+  className="table__cell table__cell--header"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
+
+exports[`TableCell snapshots should render with odd modifier 1`] = `
+<div
+  className="table__cell table__cell--odd"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
+
+exports[`TableCell snapshots should render with selected modifier 1`] = `
+<div
+  className="table__cell table__cell--selected"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
+
+exports[`TableCell snapshots should render with small modifier 1`] = `
+<div
+  className="table__cell table__cell--small"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
