@@ -1,5 +1,5 @@
 const fs = require('fs').promises;
-const { shell } = require('electron');
+const { shell, ipcRenderer } = require('electron');
 
 jest.mock('../../languageFileParser');
 
@@ -32,7 +32,7 @@ describe('API > Core test', () => {
   });
 
   it('should load app version', async () => {
-    jest.spyOn(fs, 'readFile').mockReturnValue('1.0.0');
+    jest.spyOn(ipcRenderer, 'invoke').mockReturnValue('1.0.0');
 
     const response = await coreApi.loadAppVersion();
 
