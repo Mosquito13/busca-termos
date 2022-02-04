@@ -92,8 +92,10 @@ if (!gotTheLock) {
 }
 
 ipcMain.once('show-app', () => {
-  splashWindow.close();
-  appWindow.show();
+  setTimeout(() => {
+    splashWindow.close();
+    appWindow.show();
+  }, 1000);
 });
 
 ipcMain.handle('getAppVersion', () => {

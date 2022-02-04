@@ -67,8 +67,6 @@ export const validateAndSaveFirstSettings = (languageFolder) => async (dispatch)
 };
 
 export const loadSettings = () => async (dispatch) => {
-  apiUtils.closeSplashAndShowApp();
-
   const settings = storageUtils.getSettings();
   const isValid = await apiUtils.validateLanguageFolder(
     settings?.languageFolder
@@ -81,6 +79,8 @@ export const loadSettings = () => async (dispatch) => {
     dispatch(setSettings(settings));
     dispatch(loadData(settings));
   }
+
+  apiUtils.closeSplashAndShowApp();
 };
 
 export const saveSettings = (values) => ({
