@@ -32,7 +32,7 @@ const customOptions = [
   }
 ];
 
-describe(`${ButtonRadio}`, () => {
+describe(`${ButtonRadio.name}`, () => {
   describe('tests', () => {
     let wrapper, onChangeSpy;
 

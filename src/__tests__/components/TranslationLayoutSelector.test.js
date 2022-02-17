@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 
 import TranslationLayoutSelector from '../../components/TranslationLayoutSelector';
 
-describe(`${TranslationLayoutSelector}`, () => {
+describe(`${TranslationLayoutSelector.name}`, () => {
   describe('snapshots', () => {
     it('should render', () => {
       const tree = renderer

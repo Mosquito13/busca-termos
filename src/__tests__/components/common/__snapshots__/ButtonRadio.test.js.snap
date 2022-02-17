@@ -1,42 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`({
-  options,
-  onChange,
-  value
-}) => {
-  /* istanbul ignore next */
-  cov_vfpwsgv3v().f[2]++;
-  cov_vfpwsgv3v().s[8]++;
-  return /*#__PURE__*/(
-    /* istanbul ignore next */
-    (0, _jsxDevRuntime.jsxDEV)(
-    /* istanbul ignore next */
-    "div",
-    /* istanbul ignore next */
-    {
-      className: "button-radio",
-      children: options.map((option) => {
-        /* istanbul ignore next */
-        cov_vfpwsgv3v().f[3]++;
-        cov_vfpwsgv3v().s[9]++;
-        return getOption(option, value, onChange);
-      })
-    },
-    /* istanbul ignore next */
-    void 0,
-    /* istanbul ignore next */
-    false,
-    /* istanbul ignore next */
-    {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 5
-    },
-    /* istanbul ignore next */
-    void 0)
-  );
-} snapshots should render with custom options 1`] = `
+exports[`ButtonRadio snapshots should render with custom options 1`] = `
 <div
   className="button-radio"
 >
@@ -70,43 +34,7 @@ exports[`({
 </div>
 `;
 
-exports[`({
-  options,
-  onChange,
-  value
-}) => {
-  /* istanbul ignore next */
-  cov_vfpwsgv3v().f[2]++;
-  cov_vfpwsgv3v().s[8]++;
-  return /*#__PURE__*/(
-    /* istanbul ignore next */
-    (0, _jsxDevRuntime.jsxDEV)(
-    /* istanbul ignore next */
-    "div",
-    /* istanbul ignore next */
-    {
-      className: "button-radio",
-      children: options.map((option) => {
-        /* istanbul ignore next */
-        cov_vfpwsgv3v().f[3]++;
-        cov_vfpwsgv3v().s[9]++;
-        return getOption(option, value, onChange);
-      })
-    },
-    /* istanbul ignore next */
-    void 0,
-    /* istanbul ignore next */
-    false,
-    /* istanbul ignore next */
-    {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 5
-    },
-    /* istanbul ignore next */
-    void 0)
-  );
-} snapshots should render with text options 1`] = `
+exports[`ButtonRadio snapshots should render with text options 1`] = `
 <div
   className="button-radio"
 >
