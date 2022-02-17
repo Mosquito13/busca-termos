@@ -2,6 +2,7 @@
 
 .translations-panel {
   flex: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px rgba($color-black, 0.3);
@@ -29,6 +30,7 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
+    overflow-y: auto;
 
     @include small-height-app() {
       padding: 0;
@@ -57,7 +59,6 @@
   }
 
   &__field {
-    flex: 0 0 calc(33.333% - 1rem);
     margin: 0.5rem;
     overflow: hidden;
     border-width: 1px;
@@ -69,10 +70,32 @@
     }
 
     @include small-height-app() {
-      flex: 0 0 33.333%;
       margin: 0;
       border-radius: 0;
       border: none;
     }
+
+    &--columns-1 {
+      flex: 1;
+    }
+
+    &--columns-2 {
+      flex: 0 0 calc(50% - 1rem);
+      @include small-height-app() {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--columns-3 {
+      flex: 0 0 calc(33.333% - 1rem);
+      @include small-height-app() {
+        flex: 0 0 33.333%;
+      }
+    }
+  }
+
+  &__empty-state {
+    margin: 1rem;
+    text-align: center;
   }
 }

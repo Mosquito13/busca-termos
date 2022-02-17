@@ -5,13 +5,21 @@ import orderBy from 'lodash/orderBy';
 
 import Icon, { SMALL, RESPONSIVE } from '../../components/common/Icon';
 import { languageMapping } from '../../mapping/languages';
+import TranslationLayoutSelector from '../../components/TranslationLayoutSelector';
 import Fieldset from '../../components/common/Fieldset';
 import Button from '../../components/common/Button';
 import Toggle from '../../components/common/Toggle';
 import Select from '../../components/common/Select';
 
+import {
+  saveSettings,
+  setMainLanguage,
+  setTranslationColumns,
+  toggleCompactLayout,
+  toggleDarkTheme,
+  toggleTranslation
+} from '../../actions/settings';
 import { setLoading } from '../../actions/core';
-import { saveSettings, setMainLanguage, toggleCompactLayout, toggleDarkTheme, toggleTranslation } from '../../actions/settings';
 import settingsSelectors from '../../selectors/settings';
 
 import './styles.scss';
@@ -50,6 +58,7 @@ const Settings = () => {
   const translation = useSelector(settingsSelectors.getTranslation);
   const mainLanguage = useSelector(settingsSelectors.getMainLanguage);
   const compactLayout = useSelector(settingsSelectors.isCompactLayout);
+  const translationColumns = useSelector(settingsSelectors.getTranslationColumns);
 
   const onClickBack = useCallback(() => {
     dispatch(setLoading(true));
@@ -72,6 +81,10 @@ const Settings = () => {
 
   const onChangeTranslation = useCallback((id, value) => {
     dispatch(toggleTranslation(id, value));
+  }, [dispatch]);
+
+  const onChangeTranslationColumns = useCallback((value) => {
+    dispatch(setTranslationColumns(value));
   }, [dispatch]);
 
   const [languageToggles, languageOptions] = getLanguageItems(
@@ -111,6 +124,13 @@ const Settings = () => {
               data-testid="select-main-lang"
             />
           </div>
+        </Fieldset>
+        <Fieldset title="Disposição do painel de traduções">
+          <TranslationLayoutSelector
+            value={translationColumns}
+            onChange={onChangeTranslationColumns}
+            data-testid="translation-layout-selector"
+          />
         </Fieldset>
         <Fieldset title="Mostrar no painel de traduções">
           <div className="settings__language-toggle-container">

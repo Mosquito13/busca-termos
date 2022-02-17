@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`({
+  value,
+  onChange
+}) => {
+  /* istanbul ignore next */
+  cov_kjnaax0y8().f[2]++;
+  cov_kjnaax0y8().s[4]++;
+  return /*#__PURE__*/(
+    /* istanbul ignore next */
+    (0, _jsxDevRuntime.jsxDEV)(
+    /* istanbul ignore next */
+    "div",
+    /* istanbul ignore next */
+    {
+      className: "translation-layout-selector",
+      children: /*#__PURE__*/
+      /* istanbul ignore next */
+      (0, _jsxDevRuntime.jsxDEV)(
+      /* istanbul ignore next */
+      _ButtonRadio.
+      /* istanbul ignore next */
+      default,
+      /* istanbul ignore next */
+      {
+        value: value,
+        onChange: onChange,
+        options: [{
+          value: 1,
+          text: 'Uma coluna',
+          customContent: getCustomContent(1)
+        }, {
+          value: 2,
+          text: 'Duas colunas',
+          customContent: getCustomContent(2)
+        }, {
+          value: 3,
+          text: 'Três colunas',
+          customContent: getCustomContent(3)
+        }]
+      },
+      /* istanbul ignore next */
+      void 0,
+      /* istanbul ignore next */
+      false,
+      /* istanbul ignore next */
+      {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 7
+      },
+      /* istanbul ignore next */
+      void 0)
+    },
+    /* istanbul ignore next */
+    void 0,
+    /* istanbul ignore next */
+    false,
+    /* istanbul ignore next */
+    {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 5
+    },
+    /* istanbul ignore next */
+    void 0)
+  );
+} snapshots should render 1`] = `
+<div
+  className="translation-layout-selector"
+>
+  <div
+    className="button-radio"
+  >
+    <button
+      className="button-radio__option"
+      onClick={[Function]}
+      title="Uma coluna"
+    >
+      <div
+        className="translation-layout-selector__custom-content"
+      >
+        <span />
+      </div>
+    </button>
+    <button
+      className="button-radio__option button-radio__option--selected"
+      onClick={[Function]}
+      title="Duas colunas"
+    >
+      <div
+        className="translation-layout-selector__custom-content"
+      >
+        <span />
+        <span />
+      </div>
+    </button>
+    <button
+      className="button-radio__option"
+      onClick={[Function]}
+      title="Três colunas"
+    >
+      <div
+        className="translation-layout-selector__custom-content"
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,20 @@
+@import '../../sass/styles.scss';
+
+.translation-layout-selector {
+  &__custom-content {
+    background-color: transparent;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    border: 2px solid currentColor;
+    border-radius: $radius;
+
+    & > span {
+      flex: 1;
+    }
+
+    & > span:not(:last-child) {
+      border-right: 2px solid currentColor;
+    }
+  }
+}

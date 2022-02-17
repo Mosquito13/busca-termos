@@ -484,6 +484,59 @@ exports[`Settings snapshots should render 1`] = `
       <legend
         className="fieldset__title"
       >
+        Disposição do painel de traduções
+      </legend>
+      <div
+        className="translation-layout-selector"
+      >
+        <div
+          className="button-radio"
+        >
+          <button
+            className="button-radio__option"
+            onClick={[Function]}
+            title="Uma coluna"
+          >
+            <div
+              className="translation-layout-selector__custom-content"
+            >
+              <span />
+            </div>
+          </button>
+          <button
+            className="button-radio__option"
+            onClick={[Function]}
+            title="Duas colunas"
+          >
+            <div
+              className="translation-layout-selector__custom-content"
+            >
+              <span />
+              <span />
+            </div>
+          </button>
+          <button
+            className="button-radio__option button-radio__option--selected"
+            onClick={[Function]}
+            title="Três colunas"
+          >
+            <div
+              className="translation-layout-selector__custom-content"
+            >
+              <span />
+              <span />
+              <span />
+            </div>
+          </button>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset
+      className="fieldset"
+    >
+      <legend
+        className="fieldset__title"
+      >
         Mostrar no painel de traduções
       </legend>
       <div

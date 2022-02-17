@@ -46,5 +46,10 @@
 
   &__translations {
     margin-top: 2rem;
+    overflow: hidden;
+    max-height: 35rem;
+    @include small-height-app() {
+      max-height: 25rem;
+    }
   }
 }

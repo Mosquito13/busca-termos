@@ -37,6 +37,7 @@ describe('settings reducers tests', () => {
         [languageMapping.TURKEY.id]: true,
         [languageMapping.USA.id]: true
       },
+      translationColumns: 3,
       compactLayout: false,
       darkTheme: false
     });
@@ -95,6 +96,15 @@ describe('settings reducers tests', () => {
     });
 
     expect(state.translation[languageMapping.FINLAND.id]).toBeFalsy();
+  });
+
+  it('should set translation columns', () => {
+    state = settingsReducers(state, {
+      type: actionTypes.SET_TRANSLATION_COLUMNS,
+      value: 2
+    });
+
+    expect(state.translationColumns).toBe(2);
   });
 
   it('should set language folder', () => {

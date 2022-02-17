@@ -10,7 +10,8 @@ import {
   setSettings,
   validateAndSaveFirstSettings,
   saveSettings,
-  loadSettings
+  loadSettings,
+  setTranslationColumns
 } from '../../actions/settings';
 import apiUtils from '../../utils/apiUtils';
 import storageUtils from '../../utils/storageUtils';
@@ -90,6 +91,13 @@ describe('settings actions tests', () => {
     expect(setSettings('some settings')).toMatchObject({
       type: actionTypes.SET_SETTINGS,
       value: 'some settings'
+    });
+  });
+
+  it('should create action set translation columns', () => {
+    expect(setTranslationColumns(1)).toMatchObject({
+      type: actionTypes.SET_TRANSLATION_COLUMNS,
+      value: 1
     });
   });
 

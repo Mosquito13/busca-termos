@@ -5,27 +5,28 @@ import * as reactRedux from 'react-redux';
 import TranslationsPanel from '../../components/TranslationsPanel';
 import { languageMapping } from '../../mapping/languages';
 
-const stateMock = {
+const getStateMock = (translationColumns, enableFields) => ({
   Core: {
     selectedItemId: 321
   },
   Settings: {
     mainLanguage: languageMapping.USA.id,
+    translationColumns,
     translation: {
-      [languageMapping.USA.id]: true,
-      [languageMapping.SPAIN.id]: true,
-      [languageMapping.BRAZIL.id]: true,
-      [languageMapping.FRANCE.id]: true,
-      [languageMapping.FINLAND.id]: true
+      [languageMapping.USA.id]: enableFields,
+      [languageMapping.SPAIN.id]: enableFields,
+      [languageMapping.BRAZIL.id]: enableFields,
+      [languageMapping.FRANCE.id]: enableFields,
+      [languageMapping.FINLAND.id]: enableFields
     }
   }
-};
+});
 
-const prepareReactReduxMocks = () => {
+const prepareReactReduxMocks = (translationColumns, enableFields) => {
   jest.spyOn(reactRedux, 'useDispatch').mockImplementation(() => jest.fn());
   jest
     .spyOn(reactRedux, 'useSelector')
-    .mockImplementation((selector) => selector(stateMock));
+    .mockImplementation((selector) => selector(getStateMock(translationColumns, enableFields)));
 };
 
 describe(`${TranslationsPanel.name}`, () => {
@@ -33,7 +34,7 @@ describe(`${TranslationsPanel.name}`, () => {
     let wrapper;
 
     beforeAll(() => {
-      prepareReactReduxMocks();
+      prepareReactReduxMocks(3, true);
 
       wrapper = shallow(<TranslationsPanel />);
     });
@@ -46,8 +47,32 @@ describe(`${TranslationsPanel.name}`, () => {
   });
 
   describe('snapshots', () => {
-    it('should render', () => {
-      prepareReactReduxMocks();
+    it('should render empty state when does not have fields enabled', () => {
+      prepareReactReduxMocks(3, false);
+
+      const tree = renderer.create(<TranslationsPanel />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with 3 columns', () => {
+      prepareReactReduxMocks(3, true);
+
+      const tree = renderer.create(<TranslationsPanel />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with 2 columns', () => {
+      prepareReactReduxMocks(2, true);
+
+      const tree = renderer.create(<TranslationsPanel />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with 1 column', () => {
+      prepareReactReduxMocks(1, true);
 
       const tree = renderer.create(<TranslationsPanel />).toJSON();
 

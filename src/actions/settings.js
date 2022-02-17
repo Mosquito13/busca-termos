@@ -49,6 +49,11 @@ export const setSettings = (value) => ({
   value
 });
 
+export const setTranslationColumns = (value) => ({
+  type: actionTypes.SET_TRANSLATION_COLUMNS,
+  value
+});
+
 export const validateAndSaveFirstSettings = (languageFolder) => async (dispatch) => {
   dispatch(setValidating(true));
 

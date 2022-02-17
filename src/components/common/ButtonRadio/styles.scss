@@ -1,0 +1,51 @@
+@import '../../../sass/styles.scss';
+
+.button-radio {
+  height: 5rem;
+  display: inline-flex;
+  border-radius: $radius;
+  @include themify() {
+    border: 1px solid themed('color-text');
+    color: themed('color-text');
+  }
+
+  &__option {
+    min-width: 7rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    white-space: nowrap;
+    line-height: 1rem;
+    transition: all 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include themify() {
+      color: themed('color-text');
+    }
+
+    &:hover {
+      @include themify() {
+        color: themed('color-base');
+        background-color: themed('color-text');
+        box-shadow: 0px 0px 5px themed('color-text');
+      }
+    }
+
+    &--selected {
+      @include themify() {
+        background-color: themed('color-contrast');
+      }
+    }
+  }
+
+  &__option:not(:last-child) {
+    @include themify() {
+      border-right: 1px solid themed('color-text');
+    }
+  }
+}

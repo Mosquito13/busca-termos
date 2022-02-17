@@ -22,6 +22,7 @@ const getStateMock = () => ({
   Settings: {
     darkTheme: false,
     compactLayout: false,
+    translationColumns: 3,
     translation: translationInitial,
     mainLanguage: languageMapping.USA.id
   }
@@ -48,6 +49,7 @@ describe(`${Settings.name}`, () => {
       jest.spyOn(settingsActions, 'toggleCompactLayout');
       jest.spyOn(settingsActions, 'toggleDarkTheme');
       jest.spyOn(settingsActions, 'toggleTranslation');
+      jest.spyOn(settingsActions, 'setTranslationColumns');
       jest.spyOn(coreActions, 'setLoading');
 
       wrapper = shallow(<Settings />);
@@ -88,6 +90,12 @@ describe(`${Settings.name}`, () => {
       wrapper.find('[data-testid="toggle-translation"]').at(15).simulate('change');
       expect(dispatchMock).toBeCalledTimes(1);
       expect(dispatchMock).toBeCalledWith(settingsActions.toggleTranslation(turkeyId, false));
+    });
+
+    it('should change translation columns', () => {
+      wrapper.find('[data-testid="translation-layout-selector"]').simulate('change', 2);
+      expect(dispatchMock).toBeCalledTimes(1);
+      expect(dispatchMock).toBeCalledWith(settingsActions.setTranslationColumns(2));
     });
 
     it('should save and navigate back', () => {

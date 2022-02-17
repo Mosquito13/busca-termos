@@ -25,6 +25,10 @@ const settingsSelectors = {
     return getSlice(state).translation;
   },
 
+  getTranslationColumns(state) {
+    return getSlice(state).translationColumns;
+  },
+
   getLanguageFolder(state) {
     return getSlice(state).languageFolder;
   },

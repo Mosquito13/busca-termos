@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TranslationsPanel snapshots should render 1`] = `
+exports[`TranslationsPanel snapshots should render empty state when does not have fields enabled 1`] = `
+<div
+  className="translations-panel"
+>
+  <div
+    className="translations-panel__header"
+  >
+    Traduções
+  </div>
+  <div
+    className="translations-panel__empty-state"
+  >
+    <p
+      className="paragraph"
+    >
+      Você pode habilitar traduções através da página de preferências.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`TranslationsPanel snapshots should render with 1 column 1`] = `
 <div
   className="translations-panel"
 >
@@ -16,7 +37,7 @@ exports[`TranslationsPanel snapshots should render 1`] = `
       className="translations-panel__field-row"
     >
       <div
-        className="translations-panel__field"
+        className="translations-panel__field translations-panel__field--columns-1"
       >
         <div
           className="translation-field"
@@ -52,8 +73,12 @@ exports[`TranslationsPanel snapshots should render 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="translations-panel__field-row"
+    >
       <div
-        className="translations-panel__field"
+        className="translations-panel__field translations-panel__field--columns-1"
       >
         <div
           className="translation-field"
@@ -89,8 +114,12 @@ exports[`TranslationsPanel snapshots should render 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="translations-panel__field-row"
+    >
       <div
-        className="translations-panel__field"
+        className="translations-panel__field translations-panel__field--columns-1"
       >
         <div
           className="translation-field"
@@ -131,7 +160,351 @@ exports[`TranslationsPanel snapshots should render 1`] = `
       className="translations-panel__field-row"
     >
       <div
-        className="translations-panel__field"
+        className="translations-panel__field translations-panel__field--columns-1"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Português (Brasil)"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  brazil.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TranslationsPanel snapshots should render with 2 columns 1`] = `
+<div
+  className="translations-panel"
+>
+  <div
+    className="translations-panel__header"
+  >
+    Traduções
+  </div>
+  <div
+    className="translations-panel__fields"
+  >
+    <div
+      className="translations-panel__field-row"
+    >
+      <div
+        className="translations-panel__field translations-panel__field--columns-2"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Espanhol"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  spain.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="translations-panel__field translations-panel__field--columns-2"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Finlandês"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  finland.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="translations-panel__field-row"
+    >
+      <div
+        className="translations-panel__field translations-panel__field--columns-2"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Francês"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  france.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="translations-panel__field translations-panel__field--columns-2"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Português (Brasil)"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  brazil.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TranslationsPanel snapshots should render with 3 columns 1`] = `
+<div
+  className="translations-panel"
+>
+  <div
+    className="translations-panel__header"
+  >
+    Traduções
+  </div>
+  <div
+    className="translations-panel__fields"
+  >
+    <div
+      className="translations-panel__field-row"
+    >
+      <div
+        className="translations-panel__field translations-panel__field--columns-3"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Espanhol"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  spain.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="translations-panel__field translations-panel__field--columns-3"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Finlandês"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  finland.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="translations-panel__field translations-panel__field--columns-3"
+      >
+        <div
+          className="translation-field"
+        >
+          <div
+            className="translation-field__flag"
+          >
+            <div
+              className="translation-field__icon"
+              title="Francês"
+            >
+              <div
+                className="icon icon--small"
+              >
+                <svg>
+                  france.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="input-text__input input-text__input--disabled input-text__input--borderless"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Selecione um item na lista"
+              spellCheck={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="translations-panel__field-row"
+    >
+      <div
+        className="translations-panel__field translations-panel__field--columns-3"
       >
         <div
           className="translation-field"

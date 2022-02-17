@@ -1,6 +1,7 @@
 const actionTypes = {
   SET_MAXIMIZED: 'BuscaTermos/Frame/set_maximized',
 
+  SET_TRANSLATION_COLUMNS: 'BuscaTermos/Settings/set_translation_columns',
   SET_LANGUAGE_FOLDER_ERROR: 'BuscaTermos/Settings/set_language_folder_error',
   SET_LANGUAGE_FOLDER: 'BuscaTermos/Settings/set_language_folder',
   TOGGLE_TRANSLATION: 'BuscaTermos/Settings/toggle_translation',
