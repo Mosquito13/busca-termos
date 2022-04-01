@@ -1,5 +1,6 @@
 import { ReactComponent as BrazilIcon } from '../assets/svg/brazil.svg';
 import { ReactComponent as CataloniaIcon } from '../assets/svg/catalonia.svg';
+import { ReactComponent as ChinaIcon} from '../assets/svg/china.svg';
 import { ReactComponent as CzechIcon } from '../assets/svg/czech.svg';
 import { ReactComponent as DenmarkIcon } from '../assets/svg/denmark.svg';
 import { ReactComponent as FinlandIcon } from '../assets/svg/finland.svg';
@@ -25,6 +26,11 @@ const languageMapping = {
     id: 'ca',
     title: 'Catalão',
     getIcon: () => <CataloniaIcon />
+  },
+  CHINA: {
+    id: 'zh',
+    title: 'Chinês',
+    getIcon: () => <ChinaIcon />
   },
   CZECH: {
     id: 'cs',

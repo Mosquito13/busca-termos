@@ -14,5 +14,6 @@ module.exports = {
   CATALONIA: 'ca',
   DENMARK: 'da',
   FINLAND: 'fi',
-  CZECH: 'cs'
+  CZECH: 'cs',
+  CHINA: 'zh'
 };

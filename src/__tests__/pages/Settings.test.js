@@ -60,7 +60,7 @@ describe(`${Settings.name}`, () => {
       expect(wrapper.find('[data-testid="toggle-dark-theme"]')).toHaveLength(1);
       expect(wrapper.find('[data-testid="toggle-compact-layout"]')).toHaveLength(1);
       expect(wrapper.find('[data-testid="select-main-lang"]')).toHaveLength(1);
-      expect(wrapper.find('[data-testid="toggle-translation"]')).toHaveLength(16);
+      expect(wrapper.find('[data-testid="toggle-translation"]')).toHaveLength(17);
     });
 
     it('should toggle dark theme', () => {

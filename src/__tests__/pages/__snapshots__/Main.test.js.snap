@@ -319,6 +319,47 @@ Array [
                 >
                   <div
                     className="translation-field__icon"
+                    title="Chinês"
+                  >
+                    <div
+                      className="icon icon--small"
+                    >
+                      <svg>
+                        china.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="input-text"
+                >
+                  <input
+                    className="input-text__input input-text__input--disabled input-text__input--borderless"
+                    disabled={true}
+                    onChange={[Function]}
+                    placeholder="Selecione um item na lista"
+                    spellCheck={false}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="translations-panel__field-row"
+          >
+            <div
+              className="translations-panel__field translations-panel__field--columns-undefined"
+            >
+              <div
+                className="translation-field"
+              >
+                <div
+                  className="translation-field__flag"
+                >
+                  <div
+                    className="translation-field__icon"
                     title="Dinamarquês"
                   >
                     <div
@@ -1126,6 +1167,47 @@ Array [
                     >
                       <svg>
                         catalonia.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="input-text"
+                >
+                  <input
+                    className="input-text__input input-text__input--disabled input-text__input--borderless"
+                    disabled={true}
+                    onChange={[Function]}
+                    placeholder="Selecione um item na lista"
+                    spellCheck={false}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="translations-panel__field-row"
+          >
+            <div
+              className="translations-panel__field translations-panel__field--columns-undefined"
+            >
+              <div
+                className="translation-field"
+              >
+                <div
+                  className="translation-field__flag"
+                >
+                  <div
+                    className="translation-field__icon"
+                    title="Chinês"
+                  >
+                    <div
+                      className="icon icon--small"
+                    >
+                      <svg>
+                        china.svg
                       </svg>
                     </div>
                   </div>

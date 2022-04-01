@@ -191,6 +191,27 @@ exports[`Settings snapshots should render 1`] = `
                   className="icon icon--small"
                 >
                   <svg>
+                    china.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="select__option-text"
+              >
+                Chinês
+              </div>
+            </div>
+            <div
+              className="select__option"
+              onClick={[Function]}
+            >
+              <div
+                className="select__option-icon select__option-icon--rounded-border"
+              >
+                <div
+                  className="icon icon--small"
+                >
+                  <svg>
                     denmark.svg
                   </svg>
                 </div>
@@ -599,6 +620,36 @@ exports[`Settings snapshots should render 1`] = `
               onClick={[Function]}
             >
               Catalão
+            </div>
+          </div>
+        </div>
+        <div
+          className="settings__field"
+        >
+          <div
+            className="toggle"
+          >
+            <div
+              className="toggle__input toggle__input--checked"
+              onClick={[Function]}
+            >
+              <div
+                className="toggle__circle toggle__circle--with-icon toggle__circle--checked"
+              >
+                <div
+                  className="icon"
+                >
+                  <svg>
+                    china.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              className="toggle__label"
+              onClick={[Function]}
+            >
+              Chinês
             </div>
           </div>
         </div>
