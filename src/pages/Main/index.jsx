@@ -29,7 +29,7 @@ const Main = () => {
   const appHasUpdate = useSelector(coreSelectors.getAppHasUpdate);
   const [searchValue, setSearchValue] = useState('');
 
-  const focusSearchField = useCallback(() => searchFieldRef.current.focus(), []);
+  const focusSearchField = useCallback(() => searchFieldRef.current.select(), []);
 
   useKeyboardShortcut(['Control', 'F'], focusSearchField, {
     ignoreInputFields: false

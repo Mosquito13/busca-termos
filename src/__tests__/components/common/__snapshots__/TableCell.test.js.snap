@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TableCell snapshots should not render copy button when is header 1`] = `
+<div
+  className="table__cell table__cell--header"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+</div>
+`;
+
 exports[`TableCell snapshots should render 1`] = `
 <div
   className="table__cell"
@@ -10,6 +23,61 @@ exports[`TableCell snapshots should render 1`] = `
   >
     123
   </span>
+</div>
+`;
+
+exports[`TableCell snapshots should render copy button when is not header 1`] = `
+<div
+  className="table__cell"
+  onClick={[Function]}
+>
+  <span
+    className="table__cell-text"
+  >
+    123
+  </span>
+  <div
+    className="table__cell-copy-button"
+  >
+    <div
+      className="copy-text-button"
+      onClick={[Function]}
+      title="Copiar"
+    >
+      <div
+        className="icon icon--small"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="13"
+            rx="2"
+            ry="2"
+            width="13"
+            x="9"
+            y="9"
+          />
+          <path
+            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

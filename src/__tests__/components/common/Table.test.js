@@ -55,12 +55,6 @@ describe(`${Table.name}`, () => {
         .mockImplementation(() => dispatchMock);
       jest.spyOn(reactRedux, 'useSelector').mockImplementation(() => false);
 
-      Object.assign(global.navigator, {
-        clipboard: {
-          writeText: jest.fn()
-        }
-      });
-
       wrapper = mount(
         <Table idField="uid" data={dataMock} columns={columnsMock} />
       );

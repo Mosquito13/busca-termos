@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import CopyTextButton from '../CopyTextButton';
+
 const SMALL = 'small';
 const AUTO = 'auto';
 
-const TableCell = ({ size, value, header, onSelect, selected, id, itemId, odd }) => {
+const TableCell = ({ size, value, header, onSelect, selected, id, itemId, hasCopyButton, odd }) => {
   const classes = classNames(
     'table__cell',
     odd && 'table__cell--odd',
@@ -16,6 +18,14 @@ const TableCell = ({ size, value, header, onSelect, selected, id, itemId, odd })
   return (
     <div className={classes} onClick={() => onSelect?.(itemId, id, value)}>
       <span className="table__cell-text">{value}</span>
+      {hasCopyButton && !header && (
+        <div className="table__cell-copy-button">
+          <CopyTextButton
+            value={value}
+            noMarginRight={size === SMALL}
+          />
+        </div>
+      )}
     </div>
   );
 };
@@ -52,7 +62,11 @@ TableCell.propTypes = {
   /**
    * Indica se e linha impar (para usar a zebra)
    */
-  odd: PropTypes.bool
+  odd: PropTypes.bool,
+  /**
+   * Indica se exibe botao de copia na celula
+   */
+  hasCopyButton: PropTypes.bool
 };
 
 export { SMALL, AUTO };

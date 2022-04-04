@@ -56,6 +56,18 @@ describe(`${TableCell.name}`, () => {
       expect(tree).toMatchSnapshot();
     });
 
+    it('should not render copy button when is header', () => {
+      const tree = renderer.create(<TableCell header hasCopyButton value="123" />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('should render copy button when is not header', () => {
+      const tree = renderer.create(<TableCell hasCopyButton value="123" />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
     it('should render with selected modifier', () => {
       const tree = renderer.create(<TableCell selected value="123" />).toJSON();
 

@@ -61,7 +61,7 @@
     }
 
     &--small {
-      flex: 0 0 8rem;
+      flex: 0 0 10rem;
     }
 
     &--header,
@@ -86,6 +86,14 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: default;
+  }
+
+  &__cell-copy-button {
+    display: none;
+  }
+
+  &__cell:hover &__cell-copy-button {
+    display: flex;
   }
 
   &__empty-state {

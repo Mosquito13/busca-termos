@@ -1,0 +1,25 @@
+@import '../../../sass/styles.scss';
+
+.copy-text-button {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    color: currentColor;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &--no-margin-right {
+        margin-right: 0;
+    }
+
+    &:hover {
+        @include themify() {
+            color: themed('color-copy-text-button-hover');
+        }
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}

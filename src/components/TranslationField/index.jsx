@@ -32,6 +32,7 @@ const TranslationField = ({ id, tooltip, icon }) => {
       <InputText
         placeholder="Selecione um item na lista"
         value={translation}
+        hasCopyButton
         borderless
         disabled
       />

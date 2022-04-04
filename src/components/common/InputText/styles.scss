@@ -50,4 +50,12 @@
       border-radius: 0;
     }
   }
+
+  &__copy-button {
+    display: none;
+  }
+
+  &:hover &__copy-button {
+    display: flex;
+  }
 }

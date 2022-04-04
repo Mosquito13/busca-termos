@@ -15,14 +15,13 @@ import './styles.scss';
 
 const isOdd = (index) => index % 2 !== 0;
 
-const Table = ({ data, columns, idField }) => {
+const Table = ({ data, columns, idField, hasCopyButton }) => {
   const dispatch = useDispatch();
   const [selectedCell, setSelectedCell] = useState(null);
   const compactLayout = useSelector(settingsSelectors.isCompactLayout);
 
   const onSelect = useCallback(
-    (itemId, cellId, cellValue) => {
-      window.navigator.clipboard.writeText(cellValue);
+    (itemId, cellId) => {
       setSelectedCell(cellId);
       dispatch(setSelectedItemId(itemId));
     },
@@ -55,6 +54,7 @@ const Table = ({ data, columns, idField }) => {
                       onSelect={onSelect}
                       selectedCell={selectedCell}
                       idField={idField}
+                      hasCopyButton={hasCopyButton}
                       data-testid="table-row"
                     />
                   </div>
@@ -95,7 +95,11 @@ Table.propTypes = {
        */
       size: PropTypes.oneOf([SMALL, AUTO])
     })
-  )
+  ),
+  /**
+   * Indica se exibe botao de copia na celula
+   */
+  hasCopyButton: PropTypes.bool
 };
 
 export { SMALL, AUTO };

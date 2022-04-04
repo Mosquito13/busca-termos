@@ -260,6 +260,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,6 +343,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -342,6 +426,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -383,6 +509,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -424,6 +592,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -465,6 +675,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -506,6 +758,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -547,6 +841,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -588,6 +924,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -629,6 +1007,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -670,6 +1090,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -711,6 +1173,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -752,6 +1256,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -793,6 +1339,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -834,6 +1422,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -875,6 +1505,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1142,6 +1814,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1183,6 +1897,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1224,6 +1980,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1265,6 +2063,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1306,6 +2146,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1347,6 +2229,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1388,6 +2312,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1429,6 +2395,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1470,6 +2478,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1511,6 +2561,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1552,6 +2644,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1593,6 +2727,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1634,6 +2810,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1675,6 +2893,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1716,6 +2976,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1757,6 +3059,48 @@ Array [
                     type="text"
                     value=""
                   />
+                  <div
+                    className="input-text__copy-button"
+                  >
+                    <div
+                      className="copy-text-button"
+                      onClick={[Function]}
+                      title="Copiar"
+                    >
+                      <div
+                        className="icon icon--small"
+                      >
+                        <svg
+                          fill="none"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          style={
+                            Object {
+                              "color": undefined,
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            height="13"
+                            rx="2"
+                            ry="2"
+                            width="13"
+                            x="9"
+                            y="9"
+                          />
+                          <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

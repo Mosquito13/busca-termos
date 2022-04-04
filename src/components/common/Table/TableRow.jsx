@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import TableCell, { SMALL, AUTO } from './TableCell';
 
-const buildCells = (header, columns, data, onSelect, selectedCell, idField, odd) =>
+const buildCells = (header, columns, data, onSelect, selectedCell, idField, hasCopyButton, odd) =>
   columns.map(({ title, dataKey, size }) => {
     const keyPrefix = header ? 'head_' : 'col_';
     const value = header ? title : data[dataKey];
@@ -19,17 +19,18 @@ const buildCells = (header, columns, data, onSelect, selectedCell, idField, odd)
         header={header}
         onSelect={onSelect}
         selected={selectedCell === cellId}
+        hasCopyButton={hasCopyButton}
         odd={odd}
       />
     );
   });
 
-const TableRow = ({ header, columns, data, odd, selectedCell, onSelect, idField }) => {
+const TableRow = ({ header, columns, data, odd, selectedCell, onSelect, idField, hasCopyButton }) => {
   const classes = classNames('table__row', header && 'table__row--header');
 
   return (
     <div className={classes}>
-      {buildCells(header, columns, data, onSelect, selectedCell, idField, odd)}
+      {buildCells(header, columns, data, onSelect, selectedCell, idField, hasCopyButton, odd)}
     </div>
   );
 };
@@ -77,7 +78,11 @@ TableRow.propTypes = {
   /**
    * Nome da chave dos dados onde deve-se buscar o identificador da linha
    */
-  idField: PropTypes.string
+  idField: PropTypes.string,
+  /**
+   * Indica se mostra botao de copiar na celula
+   */
+  hasCopyButton: PropTypes.bool
 };
 
 export default TableRow;

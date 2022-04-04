@@ -32,7 +32,12 @@ const LanguageTable = () => {
   }, [loading, data, filter, mainLanguage]);
 
   return (
-    <Table idField="id" data={filteredData} columns={columnsConfiguration} />
+    <Table
+      hasCopyButton
+      idField="id"
+      data={filteredData}
+      columns={columnsConfiguration}
+    />
   );
 };
 

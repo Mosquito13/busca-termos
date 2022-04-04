@@ -2,10 +2,12 @@ import { useCallback, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import CopyTextButton from '../CopyTextButton';
+
 import './styles.scss';
 
 const InputText = forwardRef(
-  ({ placeholder, value, onChange, disabled, borderless }, ref) => {
+  ({ placeholder, value, onChange, disabled, borderless, hasCopyButton }, ref) => {
     const classes = classNames(
       'input-text__input',
       disabled && 'input-text__input--disabled',
@@ -26,6 +28,11 @@ const InputText = forwardRef(
           disabled={disabled}
           spellCheck={false}
         />
+        {hasCopyButton && (
+          <div className="input-text__copy-button">
+            <CopyTextButton value={value} />
+          </div>
+        )}
       </div>
     );
   }
@@ -51,7 +58,11 @@ InputText.propTypes = {
   /**
    * Indica se deve renderizar sem bordas
    */
-  borderless: PropTypes.bool
+  borderless: PropTypes.bool,
+  /**
+   * Indica se deve mostrar o botao de copiar texto
+   */
+  hasCopyButton: PropTypes.bool
 };
 
 InputText.defaultProps = {
