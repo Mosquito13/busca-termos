@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useCallback, useMemo, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { FiInfo, FiSettings, FiRefreshCw } from 'react-icons/fi';
+import { FiInfo, FiSettings, FiRefreshCw, FiDownload } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import useKeyboardShortcut from 'use-keyboard-shortcut';
 import debounce from 'lodash/debounce';
@@ -13,6 +13,7 @@ import InputText from '../../components/common/InputText';
 import LanguageTable from '../../components/LanguageTable';
 import TranslationsPanel from '../../components/TranslationsPanel';
 
+import listDownloadUtils from '../../utils/listDownloadUtils';
 import settingsSelectors from '../../selectors/settings';
 import { loadSettings } from '../../actions/settings';
 import { setFilter } from '../../actions/core';
@@ -79,6 +80,13 @@ const Main = () => {
             />
           </div>
           <div className="main__header-buttons">
+            <Button
+              borderless
+              tooltip="Baixar lista em texto"
+              icon={<Icon><FiDownload /></Icon>}
+              onClick={listDownloadUtils.downloadCurrentList}
+              data-testid="btn-download"
+            />
             <Button
               borderless
               tooltip="Preferências"

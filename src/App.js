@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import BaseLayout from './layouts/Base';
-import configureStore from './store';
+import store from './store';
 
 import Main from './pages/Main';
 import About from './pages/About';
@@ -10,8 +10,6 @@ import Settings from './pages/Settings';
 import ConfigNotFound from './pages/ConfigNotFound';
 
 import './sass/styles.scss';
-
-const store = configureStore();
 
 const App = () => (
   <Provider store={store}>

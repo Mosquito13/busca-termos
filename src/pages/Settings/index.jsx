@@ -62,9 +62,9 @@ const Settings = () => {
 
   const onClickBack = useCallback(() => {
     dispatch(setLoading(true));
-    dispatch(saveSettings({ mainLanguage, translation, darkTheme, compactLayout }));
+    dispatch(saveSettings({ mainLanguage, translation, darkTheme, compactLayout, translationColumns }));
     navigate(-1);
-  }, [navigate, dispatch, mainLanguage, translation, darkTheme, compactLayout]);
+  }, [navigate, dispatch, mainLanguage, translation, darkTheme, compactLayout, translationColumns]);
 
   const onChangeDarkTheme = useCallback(() => {
     dispatch(toggleDarkTheme(!darkTheme));
