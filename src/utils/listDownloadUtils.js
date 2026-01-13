@@ -9,7 +9,7 @@ const FILE_TYPE = 'text/plain';
 
 const buildFileContent = (data) =>
   data
-    .map(({ id, content }) => `| ${id} | ${content} |`)
+    .map(({ id, content }) => `${id}\t${content}`)
     .join('\n');
 
 const listDownloadUtils = {
